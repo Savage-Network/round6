@@ -1,0 +1,74 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    ERRO DE FORWARDING - CORRIGIDO! ✅                        ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+❌ ERRO ANTERIOR:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+"If you wish to use IP forwarding, please enable it in your BungeeCord config as well!"
+
+
+🔍 CAUSA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+O paper-global.yml estava com online-mode: false
+Isso faz o Paper rejeitar conexões do Velocity
+
+
+✅ SOLUÇÃO APLICADA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Atualizei todos os arquivos paper-global.yml:
+
+auth/config/paper-global.yml:
+  online-mode: true ✅
+
+hub/config/paper-global.yml:
+  online-mode: true ✅
+
+game/config/paper-global.yml:
+  online-mode: true ✅
+
+
+📝 CONFIGURAÇÃO CORRETA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+proxies:
+  velocity:
+    enabled: true
+    online-mode: true      ← DEVE SER TRUE!
+    secret: round6secret2024
+
+
+⚠️ IMPORTANTE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Se você já fez upload dos arquivos antigos, SUBSTITUA os arquivos:
+  - auth/config/paper-global.yml
+  - hub/config/paper-global.yml
+  - game/config/paper-global.yml
+
+Pelos novos arquivos da pasta deploy-pronto!
+
+
+🔄 COMO APLICAR:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Pare todos os servidores
+2. Substitua os arquivos paper-global.yml
+3. Reinicie os servidores na ordem:
+   - Auth (25579)
+   - Hub (25578)
+   - Game (25580)
+   - Velocity (25100)
+
+
+✅ AGORA VAI FUNCIONAR!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Os jogadores vão conseguir conectar normalmente!
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                            PROBLEMA RESOLVIDO! ✅
+═══════════════════════════════════════════════════════════════════════════════

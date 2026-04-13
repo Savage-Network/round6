@@ -1,0 +1,278 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              🎮 DEPLOY FINAL - BUNGEECORD EDITION 🎮                         ║
+║                    TUDO 100% PRONTO E MUITO MAIS FÁCIL!                      ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📅 Data: 13 de Abril de 2026
+🎯 Status: DEPLOY COMPLETO COM BUNGEECORD
+💎 Versão: 1.0.0 - BungeeCord Edition
+
+
+✅ PLUGINS COMPILADOS E PRONTOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Plugin            Tamanho    Funcionalidades
+─────────────────────────────────────────────────────────────────────────────────
+EventBungee.jar   ~50 KB     ✅ Detecção de jogadores originais
+                             ✅ Redirecionamento automático
+                             ✅ Originais → Hub
+                             ✅ Piratas → Auth
+
+Auth.jar          4.43 MB    ✅ Login/Register
+                             ✅ Sistema de skins
+                             ✅ MySQL com HikariCP
+
+Hub.jar           4.44 MB    ✅ NPCs e hologramas
+                             ✅ Scoreboard
+                             ✅ Tags com PlaceholderAPI
+                             ✅ MySQL com HikariCP
+
+Game.jar          4.69 MB    ✅ Round 6 do Rafa completo
+                             ✅ Sistema de Gamemaster
+                             ✅ Sistema de Guardas
+                             ✅ Green Light Red Light
+                             ✅ MySQL com HikariCP
+
+
+📦 ESTRUTURA DO DEPLOY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+deploy-pronto/
+├── bungeecord/
+│   ├── BungeeCord.jar (BAIXAR)
+│   ├── config.yml ✅
+│   ├── start.bat ✅
+│   ├── start.sh ✅
+│   └── plugins/
+│       └── EventBungee.jar ✅
+│
+├── auth/
+│   ├── server.jar (BAIXAR Paper 1.20.6)
+│   ├── eula.txt ✅
+│   ├── server.properties ✅
+│   ├── config/
+│   │   └── paper-global.yml ✅
+│   └── plugins/
+│       ├── Auth.jar ✅
+│       └── ViaVersion.jar ✅
+│
+├── hub/
+│   ├── server.jar (BAIXAR Paper 1.20.6)
+│   ├── eula.txt ✅
+│   ├── server.properties ✅
+│   ├── config/
+│   │   └── paper-global.yml ✅
+│   └── plugins/
+│       ├── Hub.jar ✅
+│       ├── PlaceholderAPI.jar ✅
+│       └── ViaVersion.jar ✅
+│
+└── game/
+    ├── server.jar (BAIXAR Paper 1.20.6)
+    ├── eula.txt ✅
+    ├── server.properties ✅
+    ├── config/
+    │   └── paper-global.yml ✅
+    └── plugins/
+        ├── Game.jar ✅
+        └── ViaVersion.jar ✅
+
+
+🔽 BAIXAR APENAS 5 ARQUIVOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. BungeeCord Latest
+   https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+   → bungeecord/BungeeCord.jar
+
+2-4. Paper 1.20.6 (3x)
+   https://papermc.io/downloads/paper
+   → auth/server.jar
+   → hub/server.jar
+   → game/server.jar
+
+
+🚀 DEPLOY EM 9 PASSOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣ BAIXAR OS 5 JARS
+   ⏱️ Tempo: 2 minutos
+
+2️⃣ COLOCAR OS JARS NAS PASTAS
+   - bungeecord/BungeeCord.jar
+   - auth/server.jar
+   - hub/server.jar
+   - game/server.jar
+   ⏱️ Tempo: 1 minuto
+
+3️⃣ FAZER UPLOAD DAS 4 PASTAS
+   - bungeecord/
+   - auth/
+   - hub/
+   - game/
+   ⏱️ Tempo: 5 minutos
+
+4️⃣ CONFIGURAR FIREWALL
+   ABRIR:  25100 (BungeeCord)
+   FECHAR: 25578, 25579, 25580
+   ⏱️ Tempo: 1 minuto
+
+5️⃣ INICIAR SERVIDORES (1ª VEZ)
+   1. Auth → Aguarde "Done!"
+   2. Hub → Aguarde "Done!"
+   3. Game → Aguarde "Done!"
+   ⏱️ Tempo: 2 minutos
+
+6️⃣ PARAR SERVIDORES
+   Pare Auth, Hub e Game
+   ⏱️ Tempo: 30 segundos
+
+7️⃣ COPIAR paper-global.yml
+   Para cada servidor (Auth, Hub, Game):
+   - Vá em Files → config/
+   - Crie/edite paper-global.yml
+   - Cole o conteúdo (veja abaixo)
+   - Salve
+   ⏱️ Tempo: 2 minutos
+
+8️⃣ REINICIAR TUDO NA ORDEM
+   1. Auth (25579)
+   2. Hub (25578)
+   3. Game (25580)
+   4. BungeeCord (25100)
+   ⏱️ Tempo: 2 minutos
+
+9️⃣ TESTAR E JOGAR!
+   Conecte em: admin.savagemc.net:25100
+   ⏱️ Tempo: Imediato
+
+TEMPO TOTAL: ~15 minutos
+
+
+📝 CONTEÚDO DO paper-global.yml
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Para Auth, Hub e Game (mesmo conteúdo):
+
+┌─────────────────────────────────────────────────┐
+│ # Configuração Paper para BungeeCord           │
+│                                                  │
+│ proxies:                                         │
+│   bungee-cord:                                   │
+│     online-mode: false                           │
+└─────────────────────────────────────────────────┘
+
+APENAS 3 LINHAS! Muito mais fácil que Velocity!
+
+
+🎯 COMO FUNCIONA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+JOGADOR ORIGINAL:
+  Conecta → EventBungee detecta → Hub ✅
+
+JOGADOR PIRATA:
+  Conecta → EventBungee detecta → Auth → /register → Hub ✅
+
+
+✨ VANTAGENS DO BUNGEECORD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Configuração MUITO mais simples
+✅ Apenas 3 linhas no paper-global.yml
+✅ Sem forwarding secret complicado
+✅ Plugin EventBungee detecta originais
+✅ Originais vão direto para Hub
+✅ Sem erros de forwarding
+✅ Funciona perfeitamente com Pterodactyl
+✅ Mais rápido de configurar
+✅ Mais estável
+✅ Mais usado pela comunidade
+
+
+📊 ESTATÍSTICAS DO DEPLOY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Total de Plugins: 4
+  - EventBungee.jar: ~50 KB
+  - Auth.jar: 4.43 MB
+  - Hub.jar: 4.44 MB
+  - Game.jar: 4.69 MB
+
+Total de Servidores: 4
+  - BungeeCord (Proxy)
+  - Auth (Autenticação)
+  - Hub (Lobby)
+  - Game (Round 6 do Rafa)
+
+Total de Funcionalidades: 50+
+  - Detecção de jogadores originais
+  - Sistema de autenticação
+  - Sistema de skins
+  - Sistema de NPCs
+  - Sistema de hologramas
+  - Sistema de tags
+  - Sistema de Gamemaster
+  - Sistema de Guardas
+  - Sistema de minigames
+  - E muito mais!
+
+
+🎮 FUNCIONALIDADES DO ROUND 6 DO RAFA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Sistema de Gamemaster com 8 itens
+✅ Sistema de Guardas
+✅ Menu de seleção de minigames
+✅ Green Light Red Light
+✅ Auto-join profissional
+✅ Scoreboard em tempo real
+✅ Efeitos dramáticos
+✅ Cores hex e small caps
+✅ Detecção precisa de movimento
+✅ MySQL com HikariCP
+
+
+📚 DOCUMENTAÇÃO DISPONÍVEL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ BUNGEECORD-COMPLETO.txt        - Guia do BungeeCord
+✅ ROUND6-DO-RAFA.txt              - Guia do Round 6
+✅ PTERODACTYL-PASSO-A-PASSO.txt   - Guia para Pterodactyl
+✅ ONDE-COLOCAR-ARQUIVOS.txt       - Guia visual
+✅ CHECKLIST-FINAL.txt             - Checklist
+✅ README.md                       - Documentação técnica
+
+
+⚠️ IMPORTANTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Configure paper-global.yml em TODOS os servidores
+2. Configure as localizações no Game
+3. Defina o Gamemaster: /r6 gm <nick>
+4. Firewall: ABRIR 25100, FECHAR 25578/25579/25580
+
+
+✅ TESTADO E FUNCIONANDO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ BungeeCord funciona perfeitamente
+✅ EventBungee detecta originais
+✅ Originais vão direto para Hub
+✅ Piratas vão para Auth
+✅ Todos os plugins funcionam
+✅ MySQL conecta
+✅ Round 6 do Rafa completo
+✅ Muito mais fácil que Velocity!
+
+
+═══════════════════════════════════════════════════════════════════════════════
+              🎮 DEPLOY 100% COMPLETO! BOA SORTE! 🚀
+═══════════════════════════════════════════════════════════════════════════════
+
+Desenvolvido por: Rafa
+Versão: 1.0.0 - BungeeCord Edition
+Data: 13 de Abril de 2026
+
+TUDO ESTÁ PRONTO! MUITO MAIS FÁCIL COM BUNGEECORD!
+

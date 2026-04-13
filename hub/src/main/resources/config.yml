@@ -1,0 +1,32 @@
+# Round 6 Hub - Configuração
+
+database:
+  host: "mysql52-farm1.kinghost.net"
+  port: 3306
+  database: "zrfa"
+  username: "zrfa"
+  password: "Rafael141011"
+
+# Servidor de jogo
+game-server: "game"
+
+# Scoreboard
+scoreboard:
+  title: "&#FF1744§lROUND 6"
+  lines:
+    - ""
+    - "§fJogador: §7{player}"
+    - "§fNível: §e{level}"
+    - ""
+    - "§fKills: §a{kills}"
+    - "§fMortes: §c{deaths}"
+    - "§fK/D: §6{kd}"
+    - ""
+    - "§fCoins: §e⛃ {coins}"
+    - ""
+    - "§7round6.com"
+
+# NPCs
+npcs:
+  enabled: true
+  auto-save: true

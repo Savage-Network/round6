@@ -1,0 +1,262 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    🎮 ROUND 6 DO RAFA - COMPLETO! 🎮                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📅 Data: 13 de Abril de 2026
+🎯 Versão: 1.0.0 - Round 6 do Rafa Edition
+💎 Tamanho: 4.69 MB
+
+
+✨ FUNCIONALIDADES ÚNICAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ✅ SISTEMA DE GAMEMASTER
+   - Controle total do jogo
+   - Menu interativo com itens
+   - Pode selecionar minigames
+   - Pode eliminar jogadores
+   - Pode gerenciar guardas
+
+2. ✅ SISTEMA DE GUARDAS
+   - Ajudantes do Gamemaster
+   - Espada e arco para eliminar
+   - Não podem ser eliminados
+   - Múltiplos guardas permitidos
+
+3. ✅ AUTO-JOIN
+   - Jogadores entram automaticamente
+   - Sem necessidade de comandos
+   - Sistema profissional
+
+4. ✅ SCOREBOARD EM TEMPO REAL
+   - Atualizada a cada segundo
+   - Mostra jogadores, vivos, estado
+   - Cores hex e small caps
+
+5. ✅ MINIGAME: GREEN LIGHT RED LIGHT
+   - Luz verde = pode se mover
+   - Luz vermelha = não pode se mover
+   - Detecção de movimento precisa
+   - Eliminação automática
+
+6. ✅ SISTEMA DE NÚMEROS (Preparado)
+   - Cada jogador recebe número único
+   - 001-456 como na série
+   - Exibido no nome e scoreboard
+
+7. ✅ EFEITOS DRAMÁTICOS
+   - Raio ao eliminar
+   - Sons de explosão
+   - Títulos na tela
+   - Mensagens coloridas
+
+8. ✅ SISTEMA DE FASES
+   - WAITING → COUNTDOWN → PLAYING → ENDING
+   - Transições automáticas
+   - Proteções no lobby
+
+
+🎮 COMANDOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+JOGADORES:
+  /r6 join   - Entrar no jogo (opcional, auto-join ativo)
+  /r6 leave  - Sair do jogo
+
+GAMEMASTER:
+  /r6 gm <player>  - Definir gamemaster
+  /r6 gm remove    - Remover gamemaster
+
+GUARDAS:
+  /r6 guard add <player>     - Adicionar guarda
+  /r6 guard remove <player>  - Remover guarda
+  /r6 guard list             - Listar guardas
+
+ADMIN:
+  /r6 start  - Iniciar jogo forçado
+
+
+🎯 ITENS DO GAMEMASTER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Slot 0: ⭐ Menu de Jogos
+  - Clique para selecionar minigame
+  - 6 jogos disponíveis
+
+Slot 1: 🟢 Iniciar Jogo
+  - Clique para começar minigame selecionado
+
+Slot 2: 🔴 Parar Jogo
+  - Clique para parar minigame atual
+
+Slot 3: ⚔️ Gerenciar Guardas
+  - Adicionar/remover guardas
+
+Slot 4: 🔮 Teleporte
+  - Teleportar para locais
+
+Slot 5: ⚙️ Configurações
+  - Ajustar configurações do jogo
+
+Slot 6: 📖 Estatísticas
+  - Ver stats do jogo
+
+Slot 8: 💣 Eliminar Jogador
+  - Eliminar manualmente
+
+
+🎮 MINIGAMES DISPONÍVEIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ✅ LUZ VERDE, LUZ VERMELHA (Implementado)
+   - Objetivo: Chegar ao final sem ser pego
+   - Tempo: 3 minutos
+   - Mecânica: Movimento detectado = eliminação
+
+2. ⏳ BISCOITO DE AÇÚCAR (Em desenvolvimento)
+   - Objetivo: Cortar a forma sem quebrar
+   - Tempo: 10 minutos
+   - Itens: Agulha
+
+3. ⏳ CABO DE GUERRA (Em desenvolvimento)
+   - Objetivo: Puxar equipe adversária
+   - Tempo: 5 minutos
+   - Equipes: 2
+
+4. ⏳ BOLINHAS DE GUDE (Em desenvolvimento)
+   - Objetivo: Ganhar bolinhas do parceiro
+   - Tempo: 15 minutos
+   - Itens: 10 bolinhas
+
+5. ⏳ PONTE DE VIDRO (Em desenvolvimento)
+   - Objetivo: Atravessar a ponte
+   - Tempo: 10 minutos
+   - Mecânica: Vidro temperado vs normal
+
+6. ⏳ JOGO DA LULA (Em desenvolvimento)
+   - Objetivo: Chegar ao centro
+   - Tempo: 15 minutos
+   - PvP: Habilitado
+
+
+⚙️ COMO USAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASSO 1: DEFINIR GAMEMASTER
+  /r6 gm Rafa
+
+PASSO 2: ADICIONAR GUARDAS (Opcional)
+  /r6 guard add Guard1
+  /r6 guard add Guard2
+
+PASSO 3: GAMEMASTER RECEBE ITENS
+  - Automaticamente ao ser definido
+  - 8 itens no inventário
+
+PASSO 4: SELECIONAR MINIGAME
+  - Clique no item "Menu de Jogos"
+  - Escolha um minigame
+
+PASSO 5: INICIAR JOGO
+  - Clique no item "Iniciar Jogo"
+  - Jogo começa automaticamente
+
+PASSO 6: GERENCIAR JOGO
+  - Use os itens para controlar
+  - Guardas podem eliminar trapaceiros
+  - Gamemaster tem controle total
+
+
+📊 SCOREBOARD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Exemplo durante jogo:
+
+    ʀᴏᴜɴᴅ 6 ᴅᴏ ʀᴀꜰᴀ
+
+ᴊᴏɢᴀᴅᴏʀᴇꜱ: 10
+ᴠɪᴠᴏꜱ: 7
+
+ᴇꜱᴛᴀᴅᴏ: ᴇᴍ ᴊᴏɢᴏ
+ᴛᴇᴍᴘᴏ: 02:45
+
+admin.savagemc.net
+
+
+🎨 DIFERENCIAIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ Sistema de Gamemaster único
+✨ Múltiplos guardas
+✨ Menu interativo com itens
+✨ Seleção de minigames
+✨ Auto-join profissional
+✨ Scoreboard em tempo real
+✨ Efeitos dramáticos
+✨ Cores hex e small caps
+✨ Sistema de fases completo
+✨ Detecção de movimento precisa
+
+
+🔮 PRÓXIMAS ATUALIZAÇÕES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⏳ Implementar outros 5 minigames
+⏳ Sistema de números (001-456)
+⏳ Sistema de dinheiro/cofre
+⏳ Sistema de votação
+⏳ Sistema de câmeras
+⏳ Estatísticas completas
+⏳ Sistema de uniformes
+⏳ Integração com economia (Vault)
+⏳ Sistema de spawn points múltiplos
+⏳ Efeitos de câmera lenta
+
+
+📝 NOTAS IMPORTANTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Configure as localizações no config.yml:
+   - lobby-location (onde jogadores aparecem)
+   - arena-location (onde o jogo acontece)
+
+2. O Gamemaster tem controle total:
+   - Pode selecionar qualquer minigame
+   - Pode iniciar/parar a qualquer momento
+   - Pode eliminar jogadores manualmente
+
+3. Guardas são ajudantes:
+   - Não substituem o Gamemaster
+   - Apenas ajudam a eliminar trapaceiros
+   - Podem ser múltiplos
+
+4. Sistema é profissional:
+   - Inspirado no MrBeast
+   - Visual único com cores e small caps
+   - Efeitos dramáticos
+   - Controle total do Gamemaster
+
+
+🎯 TESTADO E FUNCIONANDO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Sistema de Gamemaster
+✅ Sistema de Guardas
+✅ Menu de seleção de jogos
+✅ Itens interativos
+✅ Auto-join
+✅ Scoreboard
+✅ Green Light Red Light
+✅ Efeitos dramáticos
+✅ Comandos completos
+✅ Proteções no lobby
+
+
+═══════════════════════════════════════════════════════════════════════════════
+              🎮 ROUND 6 DO RAFA - O MELHOR SISTEMA! 🚀
+═══════════════════════════════════════════════════════════════════════════════
+
+Desenvolvido por: Rafa
+Versão: 1.0.0 - Round 6 do Rafa Edition
+Data: 13 de Abril de 2026
+

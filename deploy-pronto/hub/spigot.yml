@@ -1,0 +1,9 @@
+# Configuração Spigot para Hub Server
+# Coloque este arquivo na raiz do servidor (não na pasta plugins)
+
+settings:
+  bungeecord: true
+  velocity-support:
+    enabled: true
+    online-mode: false
+    secret: round6secret2024

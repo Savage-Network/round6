@@ -1,0 +1,193 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    PASTAS 100% PRONTAS - ROUND 6 SERVER                     ║
+║                         Só falta baixar os JARs!                            ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📦 O QUE VOCÊ TEM AQUI:
+
+✅ Todas as configurações prontas
+✅ Todos os plugins copiados
+✅ EULA já aceito
+✅ server.properties configurado
+✅ MySQL configurado
+✅ Portas configuradas (25100, 25101, 25102)
+✅ Scripts de inicialização prontos
+
+
+🔽 O QUE VOCÊ PRECISA BAIXAR:
+
+1️⃣ VELOCITY (Proxy)
+   📥 Baixar: https://papermc.io/downloads/velocity
+   📂 Colocar em: velocity/velocity.jar
+   ⚙️ Versão: 3.3.0 ou superior
+
+2️⃣ PAPER (Auth Server)
+   📥 Baixar: https://papermc.io/downloads/paper
+   📂 Colocar em: auth/paper.jar
+   ⚙️ Versão: 1.20.6
+
+3️⃣ PAPER (Hub Server)
+   📥 Baixar: https://papermc.io/downloads/paper
+   📂 Colocar em: hub/paper.jar
+   ⚙️ Versão: 1.20.6
+
+
+📁 ESTRUTURA DAS PASTAS:
+
+velocity/
+├── velocity.jar                    ← BAIXAR
+├── velocity.toml                   ✅ PRONTO
+├── start.bat / start.sh            ✅ PRONTO
+└── plugins/
+    └── ViaVersion.jar              ✅ PRONTO
+
+auth/
+├── paper.jar                       ← BAIXAR
+├── eula.txt                        ✅ PRONTO (eula=true)
+├── server.properties               ✅ PRONTO (porta 25101)
+├── spigot.yml                      ✅ PRONTO
+├── start.bat / start.sh            ✅ PRONTO
+├── config/
+│   └── paper-global.yml            ✅ PRONTO
+└── plugins/
+    ├── Auth.jar                    ✅ PRONTO
+    ├── ViaVersion.jar              ✅ PRONTO
+    └── Auth/
+        └── config.yml              ✅ PRONTO (MySQL configurado)
+
+hub/
+├── paper.jar                       ← BAIXAR
+├── eula.txt                        ✅ PRONTO (eula=true)
+├── server.properties               ✅ PRONTO (porta 25102)
+├── spigot.yml                      ✅ PRONTO
+├── start.bat / start.sh            ✅ PRONTO
+├── config/
+│   └── paper-global.yml            ✅ PRONTO
+└── plugins/
+    ├── Hub.jar                     ✅ PRONTO
+    ├── ViaVersion.jar              ✅ PRONTO
+    ├── PlaceholderAPI.jar          ✅ PRONTO
+    └── Hub/
+        └── config.yml              ✅ PRONTO (MySQL configurado)
+
+
+🚀 COMO USAR:
+
+PASSO 1: Baixar os JARs
+   • Velocity 3.3.0+ → velocity/velocity.jar
+   • Paper 1.20.6 → auth/paper.jar
+   • Paper 1.20.6 → hub/paper.jar
+
+PASSO 2: Copiar as pastas para a host
+   • Copie as 3 pastas (velocity, auth, hub) para sua host
+   • Mantenha a estrutura de pastas intacta
+
+PASSO 3: Iniciar os servidores (NESTA ORDEM!)
+   
+   Windows:
+   1. Execute: auth/start.bat
+   2. Aguarde ~30 segundos até ver "Done!"
+   3. Execute: hub/start.bat
+   4. Aguarde ~30 segundos até ver "Done!"
+   5. Execute: velocity/start.bat
+   
+   Linux:
+   1. chmod +x auth/start.sh && ./auth/start.sh
+   2. Aguarde ~30 segundos até ver "Done!"
+   3. chmod +x hub/start.sh && ./hub/start.sh
+   4. Aguarde ~30 segundos até ver "Done!"
+   5. chmod +x velocity/start.sh && ./velocity/start.sh
+
+PASSO 4: Conectar
+   • IP: seu-ip:25100
+   • Jogadores piratas: vão para Auth → /register senha senha
+   • Jogadores originais: vão direto para Hub
+
+
+🔌 PORTAS CONFIGURADAS:
+
+25100 → Velocity (ABRIR NO FIREWALL)
+25101 → Auth (localhost/interna)
+25102 → Hub (localhost/interna)
+
+⚠️ IMPORTANTE: Apenas a porta 25100 precisa estar aberta externamente!
+
+
+🗄️ MYSQL JÁ CONFIGURADO:
+
+Host: mysql52-farm1.kinghost.net:3306
+Database: zrfa
+User: zrfa
+Password: Rafael141011
+
+As tabelas serão criadas automaticamente:
+• round6_users → Autenticação
+• round6_skins → Cache de skins
+• round6_stats → Estatísticas
+• round6_npcs → NPCs
+
+
+✨ RECURSOS INCLUÍDOS:
+
+✅ Sistema de autenticação (login/register)
+✅ Detecção automática pirata/original
+✅ Sistema de skins embutido
+✅ Suporte multi-versão 1.8-1.21+ (ViaVersion)
+✅ Sistema de tags com PlaceholderAPI
+✅ Cores hexadecimais (&#RRGGBB)
+✅ Texto small caps (ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀꜱᴛᴜᴠᴡxʏᴢ)
+✅ Sistema de NPCs
+✅ Sistema de hologramas
+✅ Scoreboard customizada
+✅ Plugin hider
+✅ MySQL com HikariCP
+
+
+🧪 TESTAR:
+
+1. Conecte em: seu-ip:25100
+2. Você será enviado para Auth (se pirata)
+3. Digite: /register senha senha
+4. Aguarde aplicação da skin
+5. Redirecionamento automático para Hub
+
+
+🐛 PROBLEMAS?
+
+• "Can't connect to MySQL"
+  → Verifique se o host MySQL está acessível
+  → Teste: ping mysql52-farm1.kinghost.net
+
+• "Connection refused"
+  → Certifique-se que Auth e Hub iniciaram ANTES do Velocity
+  → Verifique se as portas 25101 e 25102 estão livres
+
+• "Invalid forwarding secret"
+  → NÃO altere nenhum arquivo de configuração!
+  → O secret já está configurado corretamente
+
+• Jogadores não redirecionam
+  → Verifique logs em: velocity/logs/latest.log
+  → Confirme que os 3 servidores estão rodando
+
+
+📝 LOGS:
+
+velocity/logs/latest.log
+auth/logs/latest.log
+hub/logs/latest.log
+
+
+🔄 ATUALIZAR PLUGINS:
+
+Para atualizar Auth.jar ou Hub.jar:
+1. Pare o servidor
+2. Substitua o JAR em plugins/
+3. Reinicie o servidor
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                    ESTÁ TUDO PRONTO! SÓ BAIXAR OS JARS! 🚀
+
+═══════════════════════════════════════════════════════════════════════════════

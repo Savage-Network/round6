@@ -1,0 +1,10 @@
+# Arquivos de configuração com credenciais
+config.json
+deploy-pterodactyl.py
+deploy-pterodactyl.sh
+
+# Logs
+*.log
+
+# Backups
+*.bak

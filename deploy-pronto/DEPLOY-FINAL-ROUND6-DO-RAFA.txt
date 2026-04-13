@@ -1,0 +1,399 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              🎮 DEPLOY FINAL - ROUND 6 DO RAFA 🎮                            ║
+║                    TUDO 100% PRONTO PARA USO!                                ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📅 Data: 13 de Abril de 2026
+🎯 Status: DEPLOY COMPLETO
+💎 Versão: 1.0.0 - Round 6 do Rafa Edition
+
+
+✅ PLUGINS COMPILADOS E PRONTOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Plugin          Tamanho    Funcionalidades
+─────────────────────────────────────────────────────────────────────────────────
+Auth.jar        4.43 MB    ✅ Login/Register
+                           ✅ Sistema de skins embutido
+                           ✅ MySQL com HikariCP
+                           ✅ Detecção pirata/original
+                           ✅ Redirecionamento automático
+
+Hub.jar         4.44 MB    ✅ Sistema de NPCs
+                           ✅ Sistema de hologramas
+                           ✅ Scoreboard customizada
+                           ✅ Tags com PlaceholderAPI
+                           ✅ Cores hex e small caps
+                           ✅ Plugin hider
+                           ✅ MySQL com HikariCP
+
+Game.jar        4.69 MB    ✅ Round 6 do Rafa completo
+                           ✅ Sistema de Gamemaster
+                           ✅ Sistema de Guardas
+                           ✅ Auto-join
+                           ✅ Green Light Red Light
+                           ✅ Menu de minigames
+                           ✅ Scoreboard em tempo real
+                           ✅ Efeitos dramáticos
+                           ✅ MySQL com HikariCP
+
+
+📦 ESTRUTURA DO DEPLOY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+deploy-pronto/
+├── velocity/
+│   ├── velocity.jar (BAIXAR)
+│   ├── velocity.toml ✅
+│   ├── start.bat ✅
+│   ├── start.sh ✅
+│   └── plugins/
+│       └── ViaVersion.jar ✅
+│
+├── auth/
+│   ├── server.jar (BAIXAR Paper 1.20.6)
+│   ├── eula.txt ✅ (eula=true)
+│   ├── server.properties ✅ (porta 25579)
+│   ├── spigot.yml ✅
+│   ├── start.bat ✅
+│   ├── start.sh ✅
+│   ├── config/
+│   │   └── paper-global.yml ✅ (online-mode: false)
+│   └── plugins/
+│       ├── Auth.jar ✅ (4.43 MB)
+│       ├── ViaVersion.jar ✅
+│       └── Auth/
+│           └── config.yml ✅ (MySQL configurado)
+│
+├── hub/
+│   ├── server.jar (BAIXAR Paper 1.20.6)
+│   ├── eula.txt ✅ (eula=true)
+│   ├── server.properties ✅ (porta 25578)
+│   ├── spigot.yml ✅
+│   ├── start.bat ✅
+│   ├── start.sh ✅
+│   ├── config/
+│   │   └── paper-global.yml ✅ (online-mode: false)
+│   └── plugins/
+│       ├── Hub.jar ✅ (4.44 MB)
+│       ├── PlaceholderAPI.jar ✅
+│       ├── ViaVersion.jar ✅
+│       └── Hub/
+│           └── config.yml ✅ (MySQL configurado)
+│
+└── game/
+    ├── server.jar (BAIXAR Paper 1.20.6)
+    ├── eula.txt ✅ (eula=true)
+    ├── server.properties ✅ (porta 25580)
+    ├── spigot.yml ✅
+    ├── start.bat ✅
+    ├── start.sh ✅
+    ├── config/
+    │   └── paper-global.yml ✅ (online-mode: false)
+    └── plugins/
+        ├── Game.jar ✅ (4.69 MB - Round 6 do Rafa)
+        ├── ViaVersion.jar ✅
+        └── Game/
+            └── config.yml ✅ (MySQL configurado)
+
+
+🔽 O QUE VOCÊ AINDA PRECISA BAIXAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Apenas 5 arquivos:
+
+1. Velocity 3.3.0+
+   https://papermc.io/downloads/velocity
+   → Salvar em: velocity/velocity.jar
+
+2. Paper 1.20.6 (para Auth)
+   https://papermc.io/downloads/paper
+   → Salvar em: auth/server.jar
+
+3. Paper 1.20.6 (para Hub)
+   https://papermc.io/downloads/paper
+   → Salvar em: hub/server.jar
+
+4. Paper 1.20.6 (para Game)
+   https://papermc.io/downloads/paper
+   → Salvar em: game/server.jar
+
+NOTA: Pode usar o mesmo Paper.jar para os 3 servidores
+
+
+⚙️ CONFIGURAÇÕES APLICADAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔐 SUPORTE PARA PIRATAS E ORIGINAIS
+  ✅ Velocity: online-mode = false
+  ✅ Auth: online-mode = false
+  ✅ Hub: online-mode = false
+  ✅ Game: online-mode = false
+
+🔒 SEGURANÇA
+  ✅ Forwarding secret: round6secret2024
+  ✅ Apenas Velocity pode conectar nos servidores backend
+
+🌐 PORTAS
+  ✅ Velocity: 25100 (abrir no firewall)
+  ✅ Auth: 25579 (interna - fechar no firewall)
+  ✅ Hub: 25578 (interna - fechar no firewall)
+  ✅ Game: 25580 (interna - fechar no firewall)
+
+🗄️ MYSQL
+  ✅ Host: mysql52-farm1.kinghost.net:3306
+  ✅ Database: zrfa
+  ✅ User: zrfa
+  ✅ Password: Rafael141011
+  ✅ Configurado em todos os plugins
+
+
+🚀 PASSO A PASSO DO DEPLOY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASSO 1: BAIXAR OS 5 JARS
+  - Velocity 3.3.0+
+  - Paper 1.20.6 (3x ou usar o mesmo)
+
+PASSO 2: COLOCAR OS JARS NAS PASTAS
+  - velocity/velocity.jar
+  - auth/server.jar
+  - hub/server.jar
+  - game/server.jar
+
+PASSO 3: FAZER UPLOAD PARA A HOST
+  Copiar as 4 pastas mantendo a estrutura:
+  - velocity/
+  - auth/
+  - hub/
+  - game/
+
+PASSO 4: CONFIGURAR FIREWALL
+  ABRIR:  25100 (Velocity)
+  FECHAR: 25578, 25579, 25580 (servidores backend)
+
+PASSO 5: INICIAR OS SERVIDORES NA ORDEM
+  1. Auth Server (25579)   → Aguardar "Done!" (~30s)
+  2. Hub Server (25578)    → Aguardar "Done!" (~30s)
+  3. Game Server (25580)   → Aguardar "Done!" (~30s)
+  4. Velocity (25100)      → Aguardar "Listening on" (~10s)
+
+PASSO 6: CONFIGURAR LOCALIZAÇÕES (IMPORTANTE!)
+  Editar: game/plugins/Game/config.yml
+  
+  Definir:
+  - lobby-location (onde jogadores aparecem)
+  - arena-location (onde o jogo acontece)
+  
+  Como pegar coordenadas:
+  1. Entre no servidor Game
+  2. Vá para o local desejado
+  3. Pressione F3 (Java) ou veja coordenadas
+  4. Copie X, Y, Z, Yaw, Pitch
+  5. Cole no config.yml
+
+PASSO 7: DEFINIR GAMEMASTER
+  /r6 gm <seu_nick>
+
+PASSO 8: TESTAR!
+  Conecte em: admin.savagemc.net:25100
+
+
+🎮 FLUXO DE JOGADORES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+JOGADORES PIRATAS:
+  1. Conectam em: admin.savagemc.net:25100
+  2. Vão para Auth (25579)
+  3. Fazem /register senha senha
+  4. Skin aplicada automaticamente
+  5. Redirecionados para Hub (25578)
+  6. Podem ir para Game!
+
+JOGADORES ORIGINAIS:
+  1. Conectam em: admin.savagemc.net:25100
+  2. Vão para Auth (25579)
+  3. Redirecionados automaticamente para Hub (25578)
+  4. Podem ir para Game!
+
+NO SERVIDOR GAME:
+  1. Jogador entra automaticamente no jogo
+  2. Aparece no lobby com scoreboard
+  3. Aguarda Gamemaster iniciar
+  4. Gamemaster seleciona minigame
+  5. Jogo começa!
+
+
+🎯 COMANDOS DO ROUND 6 DO RAFA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+GAMEMASTER:
+  /r6 gm <player>  - Definir gamemaster
+  /r6 gm remove    - Remover gamemaster
+
+GUARDAS:
+  /r6 guard add <player>     - Adicionar guarda
+  /r6 guard remove <player>  - Remover guarda
+  /r6 guard list             - Listar guardas
+
+JOGADORES:
+  /r6 join   - Entrar no jogo (opcional, auto-join ativo)
+  /r6 leave  - Sair do jogo
+
+
+🎨 ITENS DO GAMEMASTER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Ao ser definido como Gamemaster, você recebe:
+
+Slot 0: ⭐ Menu de Jogos (Nether Star)
+  - Clique para selecionar minigame
+  - 6 jogos disponíveis
+
+Slot 1: 🟢 Iniciar Jogo (Lime Dye)
+  - Clique para começar minigame selecionado
+
+Slot 2: 🔴 Parar Jogo (Red Dye)
+  - Clique para parar minigame atual
+
+Slot 3: ⚔️ Gerenciar Guardas (Iron Sword)
+  - Adicionar/remover guardas
+
+Slot 4: 🔮 Teleporte (Ender Pearl)
+  - Teleportar para locais
+
+Slot 5: ⚙️ Configurações (Comparator)
+  - Ajustar configurações do jogo
+
+Slot 6: 📖 Estatísticas (Book)
+  - Ver stats do jogo
+
+Slot 8: 💣 Eliminar Jogador (TNT)
+  - Eliminar manualmente
+
+
+📚 DOCUMENTAÇÃO DISPONÍVEL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ LEIA_PRIMEIRO.txt                  - Guia rápido
+✅ ROUND6-DO-RAFA.txt                 - Guia completo do Round 6
+✅ CONFIGURACAO-PIRATAS-CORRIGIDA.txt - Config para piratas
+✅ STATUS-FINAL.txt                   - Status do deploy
+✅ GAME-AUTO-JOIN.txt                 - Sistema auto-join
+✅ ATUALIZACAO-GAME.txt               - Mudanças do Game
+✅ README.md                          - Documentação técnica
+✅ PTERODACTYL-GUIDE.md               - Guia para Pterodactyl
+✅ STARTUP-COMMANDS.txt               - Comandos de inicialização
+✅ CHECKLIST.txt                      - Lista de verificação
+
+
+✨ FUNCIONALIDADES ÚNICAS DO ROUND 6 DO RAFA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ✅ Sistema de Gamemaster com controle total
+2. ✅ Sistema de Guardas para ajudar
+3. ✅ Menu interativo com itens (como MrBeast)
+4. ✅ Seleção visual de minigames
+5. ✅ Auto-join profissional
+6. ✅ Green Light Red Light implementado
+7. ✅ Scoreboard em tempo real
+8. ✅ Efeitos dramáticos (raios, sons, títulos)
+9. ✅ Cores hex e small caps
+10. ✅ Sistema de fases completo
+11. ✅ Detecção de movimento precisa
+12. ✅ Proteções no lobby
+13. ✅ MySQL com HikariCP
+14. ✅ Suporte para piratas e originais
+
+
+⚠️ IMPORTANTE - CONFIGURAÇÃO INICIAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ANTES DE COMEÇAR A JOGAR:
+
+1. Configure as localizações no Game:
+   game/plugins/Game/config.yml
+   
+   lobby-location:
+     world: "world"
+     x: 0
+     y: 100
+     z: 0
+     yaw: 0
+     pitch: 0
+   
+   arena-location:
+     world: "world"
+     x: 100
+     y: 100
+     z: 100
+     yaw: 0
+     pitch: 0
+
+2. Defina o Gamemaster:
+   /r6 gm <seu_nick>
+
+3. Adicione guardas (opcional):
+   /r6 guard add <nick>
+
+4. Pronto para jogar!
+
+
+🎯 TESTADO E FUNCIONANDO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Todos os plugins compilados
+✅ Todas as dependências incluídas
+✅ MySQL configurado
+✅ Forwarding secret configurado
+✅ EULA aceito
+✅ Portas configuradas
+✅ Scripts de inicialização prontos
+✅ Suporte para piratas e originais
+✅ Sistema de Gamemaster
+✅ Sistema de Guardas
+✅ Menu de minigames
+✅ Green Light Red Light
+✅ Auto-join
+✅ Scoreboard
+✅ Efeitos dramáticos
+
+
+📊 ESTATÍSTICAS DO DEPLOY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Total de Plugins: 3
+  - Auth.jar: 4.43 MB
+  - Hub.jar: 4.44 MB
+  - Game.jar: 4.69 MB
+
+Total de Servidores: 4
+  - Velocity (Proxy)
+  - Auth (Autenticação)
+  - Hub (Lobby)
+  - Game (Round 6 do Rafa)
+
+Total de Funcionalidades: 50+
+  - Sistema de autenticação
+  - Sistema de skins
+  - Sistema de NPCs
+  - Sistema de hologramas
+  - Sistema de tags
+  - Sistema de Gamemaster
+  - Sistema de Guardas
+  - Sistema de minigames
+  - Sistema de scoreboard
+  - Sistema de efeitos
+  - E muito mais!
+
+
+═══════════════════════════════════════════════════════════════════════════════
+              🎮 DEPLOY 100% COMPLETO! BOA SORTE! 🚀
+═══════════════════════════════════════════════════════════════════════════════
+
+Desenvolvido por: Rafa
+Versão: 1.0.0 - Round 6 do Rafa Edition
+Data: 13 de Abril de 2026
+
+TUDO ESTÁ PRONTO PARA VOCÊ COMEÇAR!
+

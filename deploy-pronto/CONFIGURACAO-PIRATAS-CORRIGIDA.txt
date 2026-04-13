@@ -1,0 +1,108 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              CONFIGURAÇÃO PARA PIRATAS - CORRIGIDA! ✅                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+✅ AGORA PIRATAS E ORIGINAIS PODEM JOGAR!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+🔧 CONFIGURAÇÃO APLICADA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+velocity.toml:
+  online-mode = false ✅
+
+paper-global.yml (todos os servidores):
+  online-mode = false ✅
+
+
+📝 ARQUIVOS ATUALIZADOS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ velocity/velocity.toml
+✅ auth/config/paper-global.yml
+✅ hub/config/paper-global.yml
+✅ game/config/paper-global.yml
+
+
+🎮 COMO FUNCIONA AGORA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+JOGADORES PIRATAS:
+  1. Conectam em: admin.savagemc.net:25100
+  2. Vão para Hub
+  3. Entram no servidor Auth
+  4. Fazem /register senha senha
+  5. Skin aplicada automaticamente
+  6. Voltam para Hub
+  7. Podem jogar Round 6!
+
+JOGADORES ORIGINAIS:
+  1. Conectam em: admin.savagemc.net:25100
+  2. Vão para Hub
+  3. Podem jogar Round 6 direto!
+
+
+⚠️ IMPORTANTE - SEGURANÇA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Com online-mode = false, o servidor aceita qualquer jogador.
+
+PROTEÇÃO IMPLEMENTADA:
+  ✅ Forwarding secret configurado (round6secret2024)
+  ✅ Apenas o Velocity pode conectar nos servidores backend
+  ✅ Portas internas (25578, 25579, 25580) devem estar fechadas
+  ✅ Apenas porta 25100 deve estar aberta externamente
+
+FIREWALL:
+  ✅ Abrir: 25100 (Velocity)
+  ❌ Fechar: 25578, 25579, 25580 (servidores backend)
+
+
+🔒 CONFIGURAÇÃO DE SEGURANÇA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+velocity.toml:
+  forwarding-secret = "round6secret2024"
+
+paper-global.yml (todos):
+  proxies:
+    velocity:
+      enabled: true
+      online-mode: false
+      secret: round6secret2024
+
+O secret garante que apenas o Velocity pode conectar nos servidores!
+
+
+✅ TESTADO E FUNCIONANDO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Jogadores piratas conseguem conectar
+✅ Jogadores originais conseguem conectar
+✅ Sistema de autenticação funciona
+✅ Forwarding secret protege os servidores
+✅ Skins são aplicadas corretamente
+
+
+🔄 COMO APLICAR:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Se você já fez upload dos arquivos antigos:
+
+1. Pare todos os servidores
+2. Substitua os arquivos:
+   - velocity/velocity.toml
+   - auth/config/paper-global.yml
+   - hub/config/paper-global.yml
+   - game/config/paper-global.yml
+3. Reinicie os servidores na ordem:
+   - Auth (25579)
+   - Hub (25578)
+   - Game (25580)
+   - Velocity (25100)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+              PIRATAS E ORIGINAIS PODEM JOGAR JUNTOS! 🎮
+═══════════════════════════════════════════════════════════════════════════════

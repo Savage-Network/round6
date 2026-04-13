@@ -1,0 +1,5 @@
+name: EventBungee
+version: 1.0.0
+main: rip.rafa.event.bungee.EventBungee
+author: zrwfaxd
+description: Sistema de detecção de jogadores originais para Round 6 do Rafa

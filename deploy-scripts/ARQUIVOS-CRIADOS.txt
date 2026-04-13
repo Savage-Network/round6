@@ -1,0 +1,298 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              📁 ARQUIVOS DO SISTEMA DE DEPLOY AUTOMÁTICO 📁                  ║
+║                    Round 6 do Rafa - BungeeCord Edition                      ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+✅ SCRIPTS PRINCIPAIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. deploy-pterodactyl.bat (Windows)
+   - Script principal para Windows
+   - Usa curl nativo do Windows
+   - Menu interativo
+   - Upload automático de arquivos
+   - Criação automática de diretórios
+   - Tamanho: ~8 KB
+
+2. deploy-pterodactyl.py (Python)
+   - Script multiplataforma em Python
+   - Requer: Python 3.6+ e biblioteca requests
+   - Mesmas funcionalidades do .bat
+   - Mais portável
+   - Tamanho: ~12 KB
+
+3. deploy-pterodactyl.sh (Bash)
+   - Script para Linux/Mac
+   - Requer: bash, curl
+   - Mesmas funcionalidades
+   - Cores e formatação
+   - Tamanho: ~10 KB
+
+
+✅ ASSISTENTES DE CONFIGURAÇÃO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4. setup-deploy.bat (Windows)
+   - Assistente interativo para Windows
+   - Guia passo a passo
+   - Validação de credenciais
+   - Teste de conexão com API
+   - Configuração automática do script
+   - Tamanho: ~6 KB
+
+5. setup-deploy.sh (Linux/Mac)
+   - Assistente para Linux/Mac
+   - Mesmas funcionalidades do .bat
+   - Cores e formatação
+   - Tamanho: ~8 KB
+
+
+✅ DOCUMENTAÇÃO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6. README-DEPLOY-AUTOMATICO.md
+   - Documentação completa
+   - Guia de instalação
+   - Exemplos de uso
+   - Troubleshooting detalhado
+   - Integração com CI/CD
+   - Boas práticas de segurança
+   - Tamanho: ~25 KB
+
+7. README-WINDOWS.txt
+   - Guia específico para Windows
+   - Passo a passo detalhado
+   - Problemas comuns no Windows
+   - Dicas e atalhos
+   - Tamanho: ~15 KB
+
+8. INICIO-RAPIDO.txt
+   - Guia rápido de início
+   - Passo a passo simplificado
+   - Checklist
+   - Multiplataforma
+   - Tamanho: ~8 KB
+
+9. RESUMO-DEPLOY-AUTOMATICO.md
+   - Visão geral do sistema
+   - Lista de funcionalidades
+   - Como usar
+   - Vantagens
+   - Tamanho: ~12 KB
+
+10. ARQUIVOS-CRIADOS.txt (este arquivo)
+    - Lista de todos os arquivos
+    - Descrição de cada um
+    - Tamanhos
+    - Tamanho: ~5 KB
+
+
+✅ CONFIGURAÇÃO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+11. config.example.json
+    - Template de configuração
+    - Estrutura JSON documentada
+    - Exemplo de valores
+    - Tamanho: ~1 KB
+
+12. config.json (criado pelo setup)
+    - Sua configuração pessoal
+    - Gerado automaticamente
+    - Contém credenciais
+    - ⚠️ NÃO COMMITAR NO GIT
+
+13. .gitignore
+    - Proteção de credenciais
+    - Evita commit acidental
+    - Lista de arquivos sensíveis
+    - Tamanho: ~0.2 KB
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+📊 ESTATÍSTICAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Total de Arquivos: 13
+Tamanho Total: ~110 KB
+
+Scripts Executáveis: 5
+  - deploy-pterodactyl.bat
+  - deploy-pterodactyl.py
+  - deploy-pterodactyl.sh
+  - setup-deploy.bat
+  - setup-deploy.sh
+
+Documentação: 5
+  - README-DEPLOY-AUTOMATICO.md
+  - README-WINDOWS.txt
+  - INICIO-RAPIDO.txt
+  - RESUMO-DEPLOY-AUTOMATICO.md
+  - ARQUIVOS-CRIADOS.txt
+
+Configuração: 3
+  - config.example.json
+  - config.json (gerado)
+  - .gitignore
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+🎯 QUAL ARQUIVO USAR?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PARA CONFIGURAR:
+────────────────────────────────────────────────────────────────────────────────
+Windows:    setup-deploy.bat
+Linux/Mac:  setup-deploy.sh
+
+
+PARA FAZER DEPLOY:
+────────────────────────────────────────────────────────────────────────────────
+Windows:    deploy-pterodactyl.bat (recomendado)
+            deploy-pterodactyl.py (alternativa)
+
+Linux/Mac:  deploy-pterodactyl.py (recomendado)
+            deploy-pterodactyl.sh (alternativa)
+
+
+PARA LER DOCUMENTAÇÃO:
+────────────────────────────────────────────────────────────────────────────────
+Início Rápido:      INICIO-RAPIDO.txt
+Windows:            README-WINDOWS.txt
+Completa:           README-DEPLOY-AUTOMATICO.md
+Resumo:             RESUMO-DEPLOY-AUTOMATICO.md
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+🚀 INÍCIO RÁPIDO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WINDOWS:
+────────────────────────────────────────────────────────────────────────────────
+1. Compilar: gradlew.bat build
+2. Configurar: deploy-scripts\setup-deploy.bat
+3. Deploy: deploy-scripts\deploy-pterodactyl.bat
+
+
+LINUX/MAC:
+────────────────────────────────────────────────────────────────────────────────
+1. Compilar: ./gradlew build
+2. Configurar: ./deploy-scripts/setup-deploy.sh
+3. Deploy: python3 deploy-scripts/deploy-pterodactyl.py
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+📦 ARQUIVOS QUE SERÃO ENVIADOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BUNGEECORD:
+  EventBungee.jar → /plugins/EventBungee.jar
+
+AUTH:
+  Auth.jar → /plugins/Auth.jar
+  config.yml → /plugins/Auth/config.yml
+  paper-global.yml → /config/paper-global.yml
+
+HUB:
+  Hub.jar → /plugins/Hub.jar
+  config.yml → /plugins/Hub/config.yml
+  paper-global.yml → /config/paper-global.yml
+
+GAME:
+  Game.jar → /plugins/Game.jar
+  config.yml → /plugins/Game/config.yml
+  paper-global.yml → /config/paper-global.yml
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+🔐 SEGURANÇA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARQUIVOS QUE CONTÊM CREDENCIAIS (após configuração):
+  - deploy-pterodactyl.bat
+  - deploy-pterodactyl.py
+  - deploy-pterodactyl.sh
+  - config.json
+
+⚠️ NUNCA COMMITE ESTES ARQUIVOS NO GIT!
+
+O arquivo .gitignore já está configurado para protegê-los.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+✅ FUNCIONALIDADES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Upload automático de plugins
+✅ Upload de arquivos de configuração
+✅ Criação automática de diretórios
+✅ Deploy seletivo (escolha quais servidores)
+✅ Menu interativo
+✅ Validação de arquivos
+✅ Feedback visual do progresso
+✅ Teste de conexão com API
+✅ Configuração guiada
+✅ Suporte multiplataforma
+✅ Proteção de credenciais
+✅ Backup automático
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+📚 ORDEM DE LEITURA RECOMENDADA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. INICIO-RAPIDO.txt
+   Para começar rapidamente
+
+2. README-WINDOWS.txt (se usar Windows)
+   Guia específico para Windows
+
+3. README-DEPLOY-AUTOMATICO.md
+   Documentação completa
+
+4. RESUMO-DEPLOY-AUTOMATICO.md
+   Visão geral do sistema
+
+5. ARQUIVOS-CRIADOS.txt (este arquivo)
+   Lista de todos os arquivos
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+🎉 CONCLUSÃO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Sistema completo de deploy automático criado com sucesso!
+
+Total de 13 arquivos criados
+Suporte para Windows, Linux e Mac
+Documentação completa
+Configuração guiada
+Pronto para uso!
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Desenvolvido por: Rafa
+Versão: 1.0.0 - BungeeCord Edition
+Data: 13 de Abril de 2026
+
+BOA SORTE COM O DEPLOY AUTOMÁTICO! 🚀
+
+═══════════════════════════════════════════════════════════════════════════════

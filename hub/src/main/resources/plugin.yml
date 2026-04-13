@@ -1,0 +1,21 @@
+name: Hub
+version: 1.0.0
+main: rip.rafa.event.hub.HubPlugin
+author: Rafa
+api-version: 1.8
+softdepend: [ViaVersion, PlaceholderAPI]
+
+commands:
+  play:
+    description: Conectar ao Round 6
+    usage: /play
+  npc:
+    description: Gerenciar NPCs
+    usage: /npc <reload>
+    permission: event.admin
+  skin:
+    description: Alterar skin
+    usage: /skin <jogador>
+  plugins:
+    description: Lista plugins
+    aliases: [pl]

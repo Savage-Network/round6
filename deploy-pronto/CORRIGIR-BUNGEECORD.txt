@@ -1,0 +1,125 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              ⚠️ CORRIGIR ERRO DO BUNGEECORD ⚠️                               ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+ERRO:
+java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class java.lang.String
+
+
+🔧 SOLUÇÃO RÁPIDA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+O problema é que o config.yml antigo tem valores booleanos onde o BungeeCord
+espera strings. Você precisa deletar o arquivo e deixar o BungeeCord gerar um novo.
+
+
+📝 PASSO A PASSO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASSO 1: PARAR O BUNGEECORD
+   - Pare o servidor BungeeCord
+
+PASSO 2: DELETAR O CONFIG.YML ANTIGO
+   - Acesse o painel Pterodactyl
+   - Vá em Files
+   - Delete o arquivo: config.yml
+
+PASSO 3: INICIAR O BUNGEECORD
+   - Inicie o servidor
+   - O BungeeCord irá gerar um novo config.yml
+
+PASSO 4: PARAR O BUNGEECORD NOVAMENTE
+   - Pare o servidor
+
+PASSO 5: EDITAR O CONFIG.YML
+   - Acesse o painel Pterodactyl
+   - Vá em Files
+   - Edite o arquivo: config.yml
+   - Cole o conteúdo abaixo
+
+PASSO 6: INICIAR O BUNGEECORD
+   - Inicie o servidor
+   - Deve funcionar agora!
+
+
+📄 CONTEÚDO DO CONFIG.YML CORRETO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+listeners:
+- query_port: 25577
+  motd: '&c&lRound 6 do Rafa\n&fServidor de eventos!'
+  tab_list: GLOBAL_PING
+  query_enabled: false
+  proxy_protocol: false
+  forced_hosts:
+    pvp.md-5.net: pvp
+  ping_passthrough: false
+  priorities:
+  - auth
+  bind_local_address: true
+  host: 0.0.0.0:25100
+  max_players: 100
+  tab_size: 60
+  force_default_server: false
+online_mode: false
+disabled_commands:
+- disabler
+servers:
+  auth:
+    motd: '&cAuth Server'
+    address: localhost:25579
+    restricted: false
+  hub:
+    motd: '&aHub Server'
+    address: localhost:25578
+    restricted: false
+  game:
+    motd: '&6Game Server'
+    address: localhost:25580
+    restricted: false
+groups:
+  md_5:
+  - admin
+timeout: 30000
+player_limit: -1
+permissions:
+  default:
+  - bungeecord.command.server
+  - bungeecord.command.list
+  admin:
+  - bungeecord.command.alert
+  - bungeecord.command.end
+  - bungeecord.command.ip
+  - bungeecord.command.reload
+network_compression_threshold: 256
+prevent_proxy_connections: false
+ip_forward: true
+log_commands: false
+log_pings: true
+connection_throttle: 4000
+connection_throttle_limit: 3
+stats: false
+
+
+⚠️ IMPORTANTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. NÃO adicione comentários (#) no config.yml
+2. Mantenha a indentação exata (use espaços, não tabs)
+3. Valores booleanos devem ser: true ou false (sem aspas)
+4. Valores de texto devem ter aspas: 'texto'
+
+
+✅ VERIFICAÇÃO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Após aplicar a correção, você deve ver:
+
+[INFO] Listening on /0.0.0.0:25100
+[INFO] EventBungee habilitado!
+[INFO] Sistema de detecção de jogadores originais ativo!
+
+
+═══════════════════════════════════════════════════════════════════════════════
+              ✅ PROBLEMA RESOLVIDO! BOA SORTE! 🚀
+═══════════════════════════════════════════════════════════════════════════════

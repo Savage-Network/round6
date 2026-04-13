@@ -1,0 +1,14 @@
+name: Auth
+version: 1.0.0
+main: rip.rafa.event.auth.AuthPlugin
+author: Rafa
+api-version: 1.8
+softdepend: [SkinsRestorer]
+
+commands:
+  login:
+    description: Fazer login
+    usage: /login <senha>
+  register:
+    description: Registrar uma conta
+    usage: /register <senha> <senha>

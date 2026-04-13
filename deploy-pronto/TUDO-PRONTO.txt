@@ -1,0 +1,221 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                         ✅ TUDO PRONTO PARA DEPLOY! ✅                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+🎉 TODOS OS PLUGINS COMPILADOS E CONFIGURADOS!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Auth.jar (24 KB) → auth/plugins/Auth.jar
+✅ Hub.jar (39 KB) → hub/plugins/Hub.jar
+✅ Game.jar (50 KB) → game/plugins/Game.jar
+✅ ViaVersion.jar (3 MB) → todos os servidores
+✅ PlaceholderAPI.jar (500 KB) → hub/plugins/
+
+NOTA: Velocity não precisa de plugin customizado!
+
+
+📁 ESTRUTURA COMPLETA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+velocity/
+├── velocity.toml                   ✅ Configurado (try = ["auth"])
+├── start.bat / start.sh            ✅ Pronto
+└── plugins/
+    └── ViaVersion.jar              ✅ Incluído
+
+auth/
+├── eula.txt                        ✅ eula=true
+├── server.properties               ✅ Porta 25579
+├── spigot.yml                      ✅ Configurado
+├── start.bat / start.sh            ✅ Pronto
+├── config/
+│   └── paper-global.yml            ✅ Velocity secret
+└── plugins/
+    ├── Auth.jar                    ✅ Compilado
+    ├── ViaVersion.jar              ✅ Incluído
+    └── Auth/
+        └── config.yml              ✅ MySQL configurado
+
+hub/
+├── eula.txt                        ✅ eula=true
+├── server.properties               ✅ Porta 25578
+├── spigot.yml                      ✅ Configurado
+├── start.bat / start.sh            ✅ Pronto
+├── config/
+│   └── paper-global.yml            ✅ Velocity secret
+└── plugins/
+    ├── Hub.jar                     ✅ Compilado
+    ├── ViaVersion.jar              ✅ Incluído
+    ├── PlaceholderAPI.jar          ✅ Incluído
+    └── Hub/
+        └── config.yml              ✅ MySQL configurado
+
+game/
+├── eula.txt                        ✅ eula=true
+├── server.properties               ✅ Porta 25580
+├── spigot.yml                      ✅ Configurado
+├── start.bat / start.sh            ✅ Pronto
+├── config/
+│   └── paper-global.yml            ✅ Velocity secret
+└── plugins/
+    ├── Game.jar                    ✅ Compilado
+    ├── ViaVersion.jar              ✅ Incluído
+    └── Game/
+        └── config.yml              ✅ MySQL + Round 6
+
+
+⚙️ CONFIGURAÇÕES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔌 PORTAS:
+   Velocity: 25100 (ABRIR NO FIREWALL)
+   Hub:      25578 (interna)
+   Auth:     25579 (interna)
+   Game:     25580 (interna)
+
+🗄️ MYSQL:
+   Host:     mysql52-farm1.kinghost.net:3306
+   Database: zrfa
+   User:     zrfa
+   Password: Rafael141011
+
+🔐 FORWARDING SECRET:
+   round6secret2024
+
+🌐 ENDEREÇOS:
+   auth = admin.savagemc.net:25579
+   hub  = admin.savagemc.net:25578
+   game = admin.savagemc.net:25580
+
+
+🔽 O QUE FALTA BAIXAR (5 arquivos)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ ] Velocity 3.3.0+ → velocity/velocity.jar
+    https://papermc.io/downloads/velocity
+
+[ ] Paper 1.20.6 → auth/paper.jar
+    https://papermc.io/downloads/paper
+
+[ ] Paper 1.20.6 → hub/paper.jar
+    https://papermc.io/downloads/paper
+
+[ ] Paper 1.20.6 → game/paper.jar
+    https://papermc.io/downloads/paper
+
+
+🚀 COMO USAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPÇÃO 1: HOST TRADICIONAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Baixe os 5 JARs
+2. Copie as 4 pastas (velocity, auth, hub, game) para a host
+3. Execute INICIAR-TUDO.bat (Windows) ou INICIAR-TUDO.sh (Linux)
+4. Conecte em: admin.savagemc.net:25100
+
+
+OPÇÃO 2: PTERODACTYL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Para cada servidor:
+
+1. Altere o Startup Command:
+   
+   Velocity:
+   java -Xms128M -XX:MaxRAMPercentage=95.0 -jar velocity.jar
+   
+   Auth/Hub/Game:
+   java -Xms1G -Xmx2G -jar paper.jar --nogui
+
+2. Faça upload de TODOS os arquivos da pasta correspondente
+   (mantenha a estrutura de pastas!)
+
+3. Inicie o servidor
+
+Guia completo: PTERODACTYL-GUIDE.md
+
+
+✨ RECURSOS IMPLEMENTADOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+AUTH SERVER:
+  ✅ Login/Register com SHA-256
+  ✅ Detecção pirata/original
+  ✅ Sistema de skins embutido
+  ✅ Bloqueio até autenticar
+  ✅ Redirect automático para hub
+  ✅ MySQL com HikariCP
+
+HUB SERVER:
+  ✅ NPCs (salvos no MySQL)
+  ✅ Hologramas (salvos no MySQL)
+  ✅ Scoreboard customizada
+  ✅ Tags com PlaceholderAPI
+  ✅ Cores hex (&#RRGGBB)
+  ✅ Small caps (ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀꜱᴛᴜᴠᴡxʏᴢ)
+  ✅ Plugin hider
+  ✅ Proteções (dano, fome, blocos, pvp)
+  ✅ MySQL com HikariCP
+
+GAME SERVER:
+  ✅ Sistema Round 6 completo
+  ✅ Min 2 jogadores, Max 100
+  ✅ Tempo de espera: 30s
+  ✅ Prêmio por vitória: 1000
+  ✅ Scoreboard do jogo
+  ✅ Sistema de eliminação
+  ✅ MySQL com HikariCP
+
+TODOS:
+  ✅ Suporte 1.8-1.21+ (ViaVersion)
+  ✅ Forwarding secret configurado
+  ✅ EULA aceito
+
+
+🗄️ TABELAS MYSQL (criadas automaticamente)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+round6_users    → Autenticação (Auth)
+round6_skins    → Cache de skins (Auth)
+round6_stats    → Estatísticas (Hub)
+round6_npcs     → NPCs (Hub)
+round6_games    → Jogos Round 6 (Game)
+round6_players  → Jogadores em jogo (Game)
+
+
+🧪 TESTAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Conecte em: admin.savagemc.net:25100
+2. Jogador pirata → Auth → /register senha senha
+3. Skin aplicada automaticamente
+4. Redirecionamento para Hub
+5. Entrar no Game para jogar Round 6
+6. Jogador original → Vai direto para Hub
+
+
+📝 ARQUIVOS DE AJUDA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+README.md                      → Documentação completa
+PTERODACTYL-GUIDE.md           → Guia para Pterodactyl
+STARTUP-COMMANDS.txt           → Comandos de inicialização
+CHECKLIST.txt                  → Lista de verificação
+CONFIGURACAO-ATUALIZADA.txt    → Detalhes técnicos
+INICIO-RAPIDO.txt              → Guia rápido
+LEIA-ME.txt                    → Guia em português
+DOWNLOAD-JARS.txt              → Links para download
+TUDO-PRONTO.txt                → Este arquivo
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║                    ESTÁ 100% PRONTO PARA DEPLOY! 🚀                         ║
+║                                                                              ║
+║              Só baixar os 5 JARs e copiar para a host!                      ║
+║                                                                              ║
+║                  Boa sorte com os testes do Round 6! 🎮                     ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝

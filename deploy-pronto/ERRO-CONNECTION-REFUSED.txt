@@ -1,0 +1,155 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    ERRO: CONNECTION REFUSED - SOLUÇÃO                        ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+❌ ERRO ENCONTRADO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Connection refused: admin.savagemc.net/198.1.195.80:25579
+
+Isso significa que o Velocity está tentando conectar no servidor Auth (porta 25579),
+mas o servidor não está rodando ou não está acessível.
+
+
+🔍 DIAGNÓSTICO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+O Velocity está funcionando corretamente na porta 25100.
+O jogador "zrwfaxd" conectou com sucesso no Velocity.
+O Velocity tentou enviar o jogador para "auth" (25579).
+❌ O servidor Auth não está rodando ou não está acessível.
+
+
+✅ SOLUÇÃO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+VOCÊ PRECISA INICIAR OS SERVIDORES BACKEND PRIMEIRO!
+
+ORDEM CORRETA DE INICIALIZAÇÃO:
+
+1️⃣ AUTH SERVER (Porta 25579)
+   → Iniciar PRIMEIRO
+   → Aguardar até ver "Done!" nos logs
+   → Tempo: ~30 segundos
+
+2️⃣ HUB SERVER (Porta 25578)
+   → Iniciar SEGUNDO
+   → Aguardar até ver "Done!" nos logs
+   → Tempo: ~30 segundos
+
+3️⃣ GAME SERVER (Porta 25580)
+   → Iniciar TERCEIRO
+   → Aguardar até ver "Done!" nos logs
+   → Tempo: ~30 segundos
+
+4️⃣ VELOCITY (Porta 25100)
+   → Iniciar POR ÚLTIMO
+   → Aguardar até ver "Listening on" nos logs
+   → Tempo: ~10 segundos
+
+
+📋 CHECKLIST:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ ] Auth Server está rodando?
+    Verificar: netstat -tulpn | grep 25579 (Linux)
+    Verificar: netstat -an | findstr 25579 (Windows)
+
+[ ] Hub Server está rodando?
+    Verificar: netstat -tulpn | grep 25578 (Linux)
+    Verificar: netstat -an | findstr 25578 (Windows)
+
+[ ] Game Server está rodando?
+    Verificar: netstat -tulpn | grep 25580 (Linux)
+    Verificar: netstat -an | findstr 25580 (Windows)
+
+[ ] Velocity está rodando?
+    Verificar: netstat -tulpn | grep 25100 (Linux)
+    Verificar: netstat -an | findstr 25100 (Windows)
+
+
+🔧 COMO INICIAR NO PTERODACTYL:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Vá no painel do Auth Server
+2. Clique em "Start"
+3. Aguarde até ver "Done!" nos logs
+4. Repita para Hub Server
+5. Repita para Game Server
+6. Por último, inicie o Velocity
+
+
+🔧 COMO INICIAR EM HOST TRADICIONAL:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WINDOWS:
+  Execute: INICIAR-TUDO.bat
+  (Inicia todos os servidores na ordem correta automaticamente)
+
+LINUX:
+  chmod +x INICIAR-TUDO.sh
+  ./INICIAR-TUDO.sh
+  (Inicia todos os servidores na ordem correta automaticamente)
+
+
+⚠️ IMPORTANTE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NUNCA inicie o Velocity antes dos servidores backend!
+
+O Velocity precisa que Auth, Hub e Game estejam rodando ANTES dele iniciar.
+
+Se você iniciar o Velocity primeiro, os jogadores vão receber erro de conexão.
+
+
+🔍 VERIFICAR SE OS SERVIDORES ESTÃO RODANDO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+LINUX:
+  ps aux | grep java
+  netstat -tulpn | grep 251
+
+WINDOWS:
+  tasklist | findstr java
+  netstat -an | findstr "251"
+
+Deve mostrar:
+  25100 - LISTENING (Velocity)
+  25578 - LISTENING (Hub)
+  25579 - LISTENING (Auth)
+  25580 - LISTENING (Game)
+
+
+📝 LOGS PARA VERIFICAR:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+AUTH SERVER:
+  Procure por: [INFO] Done! For help, type "help"
+  Procure por: [INFO] Enabling Auth v1.0.0
+
+HUB SERVER:
+  Procure por: [INFO] Done! For help, type "help"
+  Procure por: [INFO] Enabling Hub v1.0.0
+
+GAME SERVER:
+  Procure por: [INFO] Done! For help, type "help"
+  Procure por: [INFO] Enabling Game v1.0.0
+
+VELOCITY:
+  Procure por: [INFO] Listening on /[0:0:0:0:0:0:0:0]:25100
+  Procure por: [INFO] Done
+
+
+🎯 RESUMO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Inicie Auth Server (25579) → Aguarde "Done!"
+2. Inicie Hub Server (25578) → Aguarde "Done!"
+3. Inicie Game Server (25580) → Aguarde "Done!"
+4. Inicie Velocity (25100) → Aguarde "Listening on"
+5. Conecte em: admin.savagemc.net:25100
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                    INICIE OS SERVIDORES NA ORDEM CORRETA! ✅
+═══════════════════════════════════════════════════════════════════════════════

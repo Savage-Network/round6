@@ -1,0 +1,246 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              🚀 INÍCIO RÁPIDO - DEPLOY AUTOMÁTICO 🚀                         ║
+║                    Round 6 do Rafa - BungeeCord Edition                      ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+📋 PASSO A PASSO RÁPIDO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣ OBTER API KEY DO PTERODACTYL
+
+   a) Acesse seu painel: https://admin.savagemc.net
+   b) Vá em: Account → API Credentials
+   c) Clique em: Create API Key
+   d) Copie a chave (começa com ptlc_)
+
+
+2️⃣ OBTER IDs DOS SERVIDORES
+
+   Para cada servidor (BungeeCord, Auth, Hub, Game):
+   
+   a) Acesse o servidor no painel
+   b) Vá em: Settings → Debug Information
+   c) Copie o Server ID (ex: d3aac109)
+
+
+3️⃣ CONFIGURAR O SCRIPT
+
+   OPÇÃO A - Configuração Automática (Recomendado):
+   
+   WINDOWS:
+   deploy-scripts\setup-deploy.bat
+   
+   LINUX/MAC:
+   chmod +x deploy-scripts/setup-deploy.sh
+   ./deploy-scripts/setup-deploy.sh
+   
+   O assistente irá guiá-lo pela configuração!
+   
+   
+   OPÇÃO B - Configuração Manual:
+   
+   Edite o arquivo:
+   - Windows: deploy-scripts\deploy-pterodactyl.bat
+   - Python: deploy-scripts/deploy-pterodactyl.py
+   - Bash: deploy-scripts/deploy-pterodactyl.sh
+   
+   Configure:
+   - PANEL_URL = "https://admin.savagemc.net"
+   - API_KEY = "ptlc_sua_chave_aqui"
+   - SERVERS = { ... IDs dos servidores ... }
+
+
+4️⃣ INSTALAR DEPENDÊNCIAS (apenas Python)
+
+   pip install requests
+
+
+5️⃣ EXECUTAR O DEPLOY
+
+   WINDOWS:
+   deploy-scripts\deploy-pterodactyl.bat
+   
+   PYTHON:
+   python3 deploy-scripts/deploy-pterodactyl.py
+   
+   BASH:
+   ./deploy-scripts/deploy-pterodactyl.sh
+
+
+6️⃣ REINICIAR SERVIDORES
+
+   Após o deploy, reinicie os servidores no painel Pterodactyl
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+🎯 EXEMPLO DE USO COMPLETO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WINDOWS:
+# 1. Compilar os plugins
+gradlew.bat build
+
+# 2. Configurar o deploy (primeira vez)
+deploy-scripts\setup-deploy.bat
+
+# 3. Fazer deploy
+deploy-scripts\deploy-pterodactyl.bat
+
+# 4. Escolher opção no menu
+# Opção 5 = Todos os servidores
+
+# 5. Confirmar
+# Digite 's' para confirmar
+
+# 6. Aguardar conclusão
+# O script irá fazer upload de todos os arquivos
+
+# 7. Reiniciar servidores no painel
+
+
+LINUX/MAC:
+# 1. Compilar os plugins
+./gradlew build
+
+# 2. Configurar o deploy (primeira vez)
+chmod +x deploy-scripts/setup-deploy.sh
+./deploy-scripts/setup-deploy.sh
+
+# 3. Fazer deploy
+python3 deploy-scripts/deploy-pterodactyl.py
+
+# 4-7. Mesmos passos acima
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+📁 ESTRUTURA DOS ARQUIVOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+deploy-scripts/
+├── deploy-pterodactyl.bat         ← Script Windows (recomendado para Windows)
+├── deploy-pterodactyl.py          ← Script Python (multiplataforma)
+├── deploy-pterodactyl.sh          ← Script Bash (Linux/Mac)
+├── setup-deploy.bat               ← Assistente Windows
+├── setup-deploy.sh                ← Assistente Linux/Mac
+├── config.example.json            ← Exemplo de configuração
+├── config.json                    ← Sua configuração (criado pelo setup)
+├── README-DEPLOY-AUTOMATICO.md    ← Documentação completa
+└── INICIO-RAPIDO.txt              ← Este arquivo
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+🔐 SEGURANÇA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️  IMPORTANTE:
+
+1. NUNCA commite sua API Key no Git
+2. Adicione ao .gitignore:
+   
+   echo "deploy-scripts/config.json" >> .gitignore
+   echo "deploy-scripts/deploy-pterodactyl.py" >> .gitignore
+   echo "deploy-scripts/deploy-pterodactyl.sh" >> .gitignore
+
+3. Restrinja permissões dos arquivos:
+   
+   chmod 600 deploy-scripts/config.json
+   chmod 600 deploy-scripts/deploy-pterodactyl.py
+   chmod 600 deploy-scripts/deploy-pterodactyl.sh
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+🐛 PROBLEMAS COMUNS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ Erro: "401 Unauthorized"
+   → API Key inválida ou expirada
+   → Gere uma nova API Key no painel
+
+❌ Erro: "404 Not Found"
+   → Server ID incorreto
+   → Verifique os IDs em Settings → Debug Information
+
+❌ Erro: "File too large"
+   → Arquivo maior que 100 MB
+   → Pterodactyl limita uploads a 100 MB
+
+❌ Erro: "Connection refused"
+   → URL do painel incorreta
+   → Verifique se o painel está online
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+📚 DOCUMENTAÇÃO COMPLETA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Para mais detalhes, consulte:
+
+📖 README-DEPLOY-AUTOMATICO.md
+   - Documentação completa
+   - Exemplos avançados
+   - Integração com CI/CD
+   - Troubleshooting detalhado
+
+🌐 API do Pterodactyl
+   https://pterodactyl-api-docs.netvpx.com/
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+✅ CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Antes de fazer o deploy:
+
+[ ] Plugins compilados (./gradlew build)
+[ ] API Key obtida do painel
+[ ] IDs dos servidores copiados
+[ ] Script configurado
+[ ] Dependências instaladas (Python)
+[ ] Teste de conexão bem-sucedido
+
+Após o deploy:
+
+[ ] Servidores reiniciados
+[ ] Logs verificados
+[ ] Plugins carregados corretamente
+[ ] Conexão testada
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+🎉 PRONTO PARA COMEÇAR!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Execute o assistente de configuração:
+
+   chmod +x deploy-scripts/setup-deploy.sh
+   ./deploy-scripts/setup-deploy.sh
+
+Ou configure manualmente e execute:
+
+   python3 deploy-scripts/deploy-pterodactyl.py
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Desenvolvido por: Rafa
+Versão: 1.0.0 - BungeeCord Edition
+Data: 13 de Abril de 2026
+
+BOA SORTE COM O DEPLOY! 🚀
+
+═══════════════════════════════════════════════════════════════════════════════

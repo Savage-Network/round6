@@ -1,0 +1,212 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    🎮 INÍCIO RÁPIDO VISUAL 🎮                                ║
+║                  Round 6 do Rafa - Em 5 Minutos!                             ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+📥 PASSO 1: BAIXAR (2 minutos)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Baixe apenas 5 arquivos:
+
+🔹 Velocity 3.3.0+
+   https://papermc.io/downloads/velocity
+   ↓
+   velocity/velocity.jar
+
+🔹 Paper 1.20.6 (3x ou use o mesmo)
+   https://papermc.io/downloads/paper
+   ↓
+   auth/server.jar
+   hub/server.jar
+   game/server.jar
+
+
+📤 PASSO 2: UPLOAD (1 minuto)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Faça upload das 4 pastas:
+
+📁 velocity/  → Porta 25100 (ABRIR no firewall)
+📁 auth/      → Porta 25579 (FECHAR no firewall)
+📁 hub/       → Porta 25578 (FECHAR no firewall)
+📁 game/      → Porta 25580 (FECHAR no firewall)
+
+
+🚀 PASSO 3: INICIAR (2 minutos)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Inicie NA ORDEM:
+
+1️⃣ Auth Server
+   cd auth
+   ./start.sh (Linux) ou start.bat (Windows)
+   ⏳ Aguarde "Done!" (~30s)
+
+2️⃣ Hub Server
+   cd hub
+   ./start.sh (Linux) ou start.bat (Windows)
+   ⏳ Aguarde "Done!" (~30s)
+
+3️⃣ Game Server
+   cd game
+   ./start.sh (Linux) ou start.bat (Windows)
+   ⏳ Aguarde "Done!" (~30s)
+
+4️⃣ Velocity
+   cd velocity
+   ./start.sh (Linux) ou start.bat (Windows)
+   ⏳ Aguarde "Listening on" (~10s)
+
+
+⚙️ PASSO 4: CONFIGURAR (30 segundos)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Entre no servidor Game e pegue as coordenadas:
+
+📍 Lobby (onde jogadores aparecem):
+   1. Vá para o local
+   2. Pressione F3 (Java)
+   3. Copie X, Y, Z
+
+📍 Arena (onde o jogo acontece):
+   1. Vá para o local
+   2. Pressione F3 (Java)
+   3. Copie X, Y, Z
+
+Edite: game/plugins/Game/config.yml
+
+lobby-location:
+  x: [COLE AQUI]
+  y: [COLE AQUI]
+  z: [COLE AQUI]
+
+arena-location:
+  x: [COLE AQUI]
+  y: [COLE AQUI]
+  z: [COLE AQUI]
+
+Salve e reinicie o Game Server
+
+
+🎮 PASSO 5: JOGAR! (Imediato)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Conecte em: admin.savagemc.net:25100
+
+No servidor Game, defina o Gamemaster:
+   /r6 gm <seu_nick>
+
+Você receberá 8 itens no inventário:
+
+┌─────────────────────────────────────────────────┐
+│ Slot 0: ⭐ Menu de Jogos                        │
+│ Slot 1: 🟢 Iniciar Jogo                         │
+│ Slot 2: 🔴 Parar Jogo                           │
+│ Slot 3: ⚔️ Gerenciar Guardas                    │
+│ Slot 4: 🔮 Teleporte                            │
+│ Slot 5: ⚙️ Configurações                        │
+│ Slot 6: 📖 Estatísticas                         │
+│ Slot 8: 💣 Eliminar Jogador                     │
+└─────────────────────────────────────────────────┘
+
+Clique no item "Menu de Jogos" (Slot 0)
+↓
+Selecione "Green Light Red Light"
+↓
+Clique no item "Iniciar Jogo" (Slot 1)
+↓
+JOGO COMEÇA! 🎮
+
+
+📊 VISUAL DO JOGO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Scoreboard (lado direito):
+
+    ┌─────────────────────┐
+    │   ʀᴏᴜɴᴅ 6 ᴅᴏ ʀᴀꜰᴀ   │
+    ├─────────────────────┤
+    │                     │
+    │ ᴊᴏɢᴀᴅᴏʀᴇꜱ: 10      │
+    │ ᴠɪᴠᴏꜱ: 7            │
+    │                     │
+    │ ᴇꜱᴛᴀᴅᴏ: ᴇᴍ ᴊᴏɢᴏ    │
+    │ ᴛᴇᴍᴘᴏ: 02:45        │
+    │                     │
+    │ admin.savagemc.net  │
+    └─────────────────────┘
+
+Chat:
+
+[Round 6] ʟᴜᴢ ᴠᴇʀᴅᴇ!
+[Round 6] ʟᴜᴢ ᴠᴇʀᴍᴇʟʜᴀ!
+[Round 6] Player1 ꜰᴏɪ ᴇʟɪᴍɪɴᴀᴅᴏ!
+
+Título na tela:
+
+    ╔═══════════════════════════════╗
+    ║     ʟᴜᴢ ᴠᴇʀᴍᴇʟʜᴀ            ║
+    ╚═══════════════════════════════╝
+
+
+🎯 COMANDOS RÁPIDOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Gamemaster:
+  /r6 gm <player>  → Definir gamemaster
+  /r6 gm remove    → Remover gamemaster
+
+Guardas:
+  /r6 guard add <player>     → Adicionar guarda
+  /r6 guard remove <player>  → Remover guarda
+  /r6 guard list             → Listar guardas
+
+Jogadores:
+  /r6 join   → Entrar (opcional, auto-join ativo)
+  /r6 leave  → Sair
+
+
+✨ FUNCIONALIDADES ÚNICAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Sistema de Gamemaster com itens
+✅ Menu interativo de minigames
+✅ Sistema de Guardas
+✅ Auto-join profissional
+✅ Green Light Red Light
+✅ Scoreboard em tempo real
+✅ Efeitos dramáticos (raios, sons)
+✅ Cores hex e small caps
+✅ Suporte piratas e originais
+
+
+⚠️ IMPORTANTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔥 FIREWALL:
+   ABRIR:  25100 (Velocity)
+   FECHAR: 25578, 25579, 25580 (servidores backend)
+
+📍 LOCALIZAÇÕES:
+   Configure lobby-location e arena-location no config.yml
+
+🎮 GAMEMASTER:
+   Defina com /r6 gm <nick> para receber os itens
+
+
+🎉 PRONTO!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Em apenas 5 minutos você tem:
+
+✅ 4 servidores rodando
+✅ 3 plugins funcionando
+✅ Sistema de Gamemaster ativo
+✅ Round 6 do Rafa pronto para jogar!
+
+
+═══════════════════════════════════════════════════════════════════════════════
+              🎮 DIVIRTA-SE COM O ROUND 6 DO RAFA! 🚀
+═══════════════════════════════════════════════════════════════════════════════
+

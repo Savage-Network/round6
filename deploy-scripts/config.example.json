@@ -1,0 +1,70 @@
+{
+  "panel_url": "https://admin.savagemc.net",
+  "api_key": "ptlc_YOUR_API_KEY_HERE",
+  "servers": {
+    "bungeecord": {
+      "id": "SERVER_ID_BUNGEECORD",
+      "name": "BungeeCord Proxy",
+      "files": [
+        {
+          "local": "deploy-pronto/bungeecord/plugins/EventBungee.jar",
+          "remote": "/plugins/EventBungee.jar"
+        }
+      ]
+    },
+    "auth": {
+      "id": "SERVER_ID_AUTH",
+      "name": "Auth Server",
+      "files": [
+        {
+          "local": "deploy-pronto/auth/plugins/Auth.jar",
+          "remote": "/plugins/Auth.jar"
+        },
+        {
+          "local": "deploy-pronto/auth/plugins/Auth/config.yml",
+          "remote": "/plugins/Auth/config.yml"
+        },
+        {
+          "local": "deploy-pronto/auth/config/paper-global.yml",
+          "remote": "/config/paper-global.yml"
+        }
+      ]
+    },
+    "hub": {
+      "id": "SERVER_ID_HUB",
+      "name": "Hub Server",
+      "files": [
+        {
+          "local": "deploy-pronto/hub/plugins/Hub.jar",
+          "remote": "/plugins/Hub.jar"
+        },
+        {
+          "local": "deploy-pronto/hub/plugins/Hub/config.yml",
+          "remote": "/plugins/Hub/config.yml"
+        },
+        {
+          "local": "deploy-pronto/hub/config/paper-global.yml",
+          "remote": "/config/paper-global.yml"
+        }
+      ]
+    },
+    "game": {
+      "id": "SERVER_ID_GAME",
+      "name": "Game Server",
+      "files": [
+        {
+          "local": "deploy-pronto/game/plugins/Game.jar",
+          "remote": "/plugins/Game.jar"
+        },
+        {
+          "local": "deploy-pronto/game/plugins/Game/config.yml",
+          "remote": "/plugins/Game/config.yml"
+        },
+        {
+          "local": "deploy-pronto/game/config/paper-global.yml",
+          "remote": "/config/paper-global.yml"
+        }
+      ]
+    }
+  }
+}

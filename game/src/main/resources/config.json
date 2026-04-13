@@ -1,0 +1,91 @@
+{
+  "general": {
+    "minPlayers": 2,
+    "explanationDelay": 40,
+    "startDelay": 60
+  },
+  "games": {
+    "redlight": {
+      "enabled": true,
+      "startLocation": {
+        "world": "world",
+        "x": 0.5,
+        "y": 64.0,
+        "z": 0.5,
+        "yaw": 0.0,
+        "pitch": 0.0
+      },
+      "finishLocation": {
+        "world": "world",
+        "x": 0.5,
+        "y": 64.0,
+        "z": 50.5,
+        "yaw": 0.0,
+        "pitch": 0.0
+      },
+      "timeout": 6000
+    },
+    "tug": {
+      "enabled": true,
+      "centerLocation": {
+        "world": "world",
+        "x": 100.5,
+        "y": 64.0,
+        "z": 0.5,
+        "yaw": 0.0,
+        "pitch": 0.0
+      },
+      "timeout": 6000
+    },
+    "mingle": {
+      "enabled": true,
+      "platformCenter": {
+        "world": "world",
+        "x": 200.5,
+        "y": 64.0,
+        "z": 0.5,
+        "yaw": 0.0,
+        "pitch": 0.0
+      },
+      "rooms": [
+        {
+          "world": "world",
+          "x": 210.5,
+          "y": 64.0,
+          "z": 0.5,
+          "yaw": 0.0,
+          "pitch": 0.0
+        },
+        {
+          "world": "world",
+          "x": 220.5,
+          "y": 64.0,
+          "z": 0.5,
+          "yaw": 0.0,
+          "pitch": 0.0
+        },
+        {
+          "world": "world",
+          "x": 230.5,
+          "y": 64.0,
+          "z": 0.5,
+          "yaw": 0.0,
+          "pitch": 0.0
+        }
+      ],
+      "timeout": 6000
+    },
+    "glass": {
+      "enabled": true,
+      "startLocation": {
+        "world": "world",
+        "x": 300.5,
+        "y": 64.0,
+        "z": 0.5,
+        "yaw": 0.0,
+        "pitch": 0.0
+      },
+      "timeout": 6000
+    }
+  }
+}

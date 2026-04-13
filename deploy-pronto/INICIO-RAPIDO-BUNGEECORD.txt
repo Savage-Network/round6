@@ -1,0 +1,227 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    INÍCIO RÁPIDO - ROUND 6 (BUNGEECORD)                      ║
+║                    Configurado para admin.savagemc.net                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+🔽 PASSO 1: BAIXAR OS JARS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. BungeeCord Latest
+   Link: https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+   Salvar em: bungeecord/BungeeCord.jar
+
+2. Paper 1.20.6 (Auth)
+   Link: https://papermc.io/downloads/paper
+   Salvar em: auth/server.jar
+
+3. Paper 1.20.6 (Hub)
+   Link: https://papermc.io/downloads/paper
+   Salvar em: hub/server.jar
+
+4. Paper 1.20.6 (Game)
+   Link: https://papermc.io/downloads/paper
+   Salvar em: game/server.jar
+
+NOTA: Pode usar o mesmo Paper.jar para os 3 servidores
+
+
+📂 PASSO 2: COPIAR PARA A HOST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Copie as 4 pastas mantendo a estrutura:
+
+deploy-pronto/bungeecord/  →  /caminho/na/host/bungeecord/
+deploy-pronto/auth/        →  /caminho/na/host/auth/
+deploy-pronto/hub/         →  /caminho/na/host/hub/
+deploy-pronto/game/        →  /caminho/na/host/game/
+
+
+▶️ PASSO 3: INICIAR OS SERVIDORES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WINDOWS (Automático):
+  Clique duas vezes em: INICIAR-TUDO.bat
+
+WINDOWS (Manual):
+  1. auth\start.bat        (aguardar 30s)
+  2. hub\start.bat         (aguardar 30s)
+  3. game\start.bat        (aguardar 30s)
+  4. bungeecord\start.bat  (aguardar 5s)
+
+LINUX (Automático):
+  chmod +x INICIAR-TUDO.sh
+  ./INICIAR-TUDO.sh
+
+LINUX (Manual):
+  chmod +x dar-permissao.sh
+  ./dar-permissao.sh
+  ./auth/start.sh        (aguardar 30s)
+  ./hub/start.sh         (aguardar 30s)
+  ./game/start.sh        (aguardar 30s)
+  ./bungeecord/start.sh  (aguardar 5s)
+
+
+⚙️ PASSO 4: CONFIGURAR paper-global.yml (IMPORTANTE!)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Para cada servidor (Auth, Hub, Game):
+
+1. Inicie o servidor uma vez
+2. Aguarde criar a pasta config/
+3. Pare o servidor
+4. Copie paper-global.yml para config/paper-global.yml
+5. Reinicie o servidor
+
+Conteúdo do paper-global.yml:
+
+proxies:
+  bungee-cord:
+    online-mode: false
+
+
+🎮 PASSO 5: CONECTAR E TESTAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Abra o Minecraft
+2. Conecte em: admin.savagemc.net:25100
+
+JOGADOR ORIGINAL (Premium):
+  → Vai direto para Hub ✅
+  → Pode jogar imediatamente!
+
+JOGADOR PIRATA (Cracked):
+  → Vai para Auth
+  → /register senha senha
+  → Skin aplicada automaticamente
+  → Vai para Hub
+  → Pode jogar!
+
+3. No Hub, entre no servidor Game para jogar Round 6!
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                            PORTAS CONFIGURADAS                               ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+BungeeCord (Proxy) → 25100 (ABRIR NO FIREWALL)
+Hub Server         → 25578 (interna - FECHAR)
+Auth Server        → 25579 (interna - FECHAR)
+Game Server        → 25580 (interna - FECHAR)
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                              JÁ CONFIGURADO                                  ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+✅ EULA aceito em todos os servidores
+✅ Portas configuradas (25100, 25578, 25579, 25580)
+✅ MySQL configurado (mysql52-farm1.kinghost.net)
+✅ IP Forwarding habilitado no BungeeCord
+✅ Todos os plugins incluídos
+✅ EventBungee detecta originais automaticamente
+✅ ViaVersion em todos os servidores (1.8-1.21+)
+✅ Scripts de inicialização prontos
+✅ Configurações do Round 6 prontas
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                              RECURSOS ATIVOS                                 ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+BUNGEECORD:
+  • Detecção automática de originais
+  • Originais → Hub (skip Auth)
+  • Piratas → Auth
+  • IP Forwarding habilitado
+  • Logs no console
+
+AUTH SERVER:
+  • Sistema de login/register
+  • Sistema de skins embutido
+  • Bloqueio até autenticar
+  • Redirect automático para hub
+  • SHA-256 password hashing
+
+HUB SERVER:
+  • NPCs e hologramas
+  • Scoreboard customizada
+  • Tags com PlaceholderAPI
+  • Cores hex (&#RRGGBB)
+  • Small caps (ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀꜱᴛᴜᴠᴡxʏᴢ)
+  • Plugin hider
+
+GAME SERVER:
+  • Sistema Round 6 do Rafa completo
+  • Sistema de Gamemaster (como MrBeast)
+  • Sistema de Guardas
+  • Auto-join profissional
+  • Green Light Red Light
+  • Menu interativo com 8 itens
+  • Scoreboard em tempo real
+  • Efeitos dramáticos
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                            MYSQL (JÁ CONFIGURADO)                            ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+Host:     mysql52-farm1.kinghost.net:3306
+Database: zrfa
+User:     zrfa
+Password: Rafael141011
+
+Tabelas criadas automaticamente:
+  • round6_users    → Autenticação
+  • round6_skins    → Cache de skins
+  • round6_stats    → Estatísticas
+  • round6_npcs     → NPCs
+  • round6_games    → Jogos Round 6
+  • round6_players  → Jogadores em jogo
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                              FLUXO DE JOGO                                   ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+JOGADOR ORIGINAL:
+  1. Conecta → admin.savagemc.net:25100 (BungeeCord)
+  2. EventBungee detecta que é original
+  3. Vai direto para Hub (25578) ✅
+  4. Pode jogar imediatamente!
+
+JOGADOR PIRATA:
+  1. Conecta → admin.savagemc.net:25100 (BungeeCord)
+  2. EventBungee detecta que é pirata
+  3. Vai para Auth (25579)
+  4. /register senha senha
+  5. Skin aplicada
+  6. Vai para Hub (25578)
+  7. Pode jogar!
+
+NO GAME:
+  1. Auto-join ativo
+  2. Gamemaster recebe 8 itens
+  3. Seleciona minigame
+  4. Inicia o jogo
+  5. Jogo começa!
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                            ARQUIVOS DE AJUDA                                 ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+DEPLOY_FINAL_BUNGEECORD.txt       → Guia completo do deploy
+BUNGEECORD-COMPLETO.txt           → Guia do BungeeCord
+CORRIGIR-ERRO-FORWARDING.txt      → Como corrigir erro de forwarding
+DOWNLOAD-JARS.txt                 → Links para download
+ROUND6-DO-RAFA.txt                → Guia do Round 6
+INICIO-RAPIDO-BUNGEECORD.txt      → Este arquivo
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                              ESTÁ TUDO PRONTO!                               ║
+║                                                                              ║
+║                  Só baixar os JARs e iniciar os servidores!                 ║
+║                                                                              ║
+║                  BUNGEECORD É MUITO MAIS FÁCIL! 🚀                          ║
+╚══════════════════════════════════════════════════════════════════════════════╝

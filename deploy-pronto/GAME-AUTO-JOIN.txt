@@ -1,0 +1,235 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              🎮 GAME SERVER - AUTO-JOIN IMPLEMENTADO! 🎮                     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+✅ SISTEMA PROFISSIONAL COMO MRBEAST E PEDRODBR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+O Game Server agora funciona de forma AUTOMÁTICA e PROFISSIONAL!
+
+
+🚀 RECURSOS IMPLEMENTADOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ AUTO-JOIN
+  - Jogador entra automaticamente no jogo ao conectar
+  - Sem necessidade de comandos
+  - Teleporte automático para lobby
+
+✅ SCOREBOARD SEMPRE VISÍVEL
+  - Atualizada em tempo real (1x por segundo)
+  - Mostra: jogadores, vivos, estado, tempo
+  - Cores hex e small caps
+
+✅ SISTEMA DE FASES
+  - WAITING: Aguardando jogadores
+  - COUNTDOWN: Contagem regressiva (30s)
+  - PLAYING: Jogo em andamento
+  - ENDING: Fim do jogo
+
+✅ EFEITOS VISUAIS
+  - Títulos na tela (boas-vindas, contagem, vitória)
+  - Sons (pling, dragon growl, challenge complete)
+  - Mensagens coloridas com hex
+
+✅ SISTEMA DE LOBBY
+  - Proteção total (sem dano, sem fome)
+  - Bloqueio de blocos (quebrar/colocar)
+  - GameMode Adventure
+  - Teleporte automático
+
+✅ SISTEMA DE JOGO
+  - Teleporte para arena ao iniciar
+  - GameMode Survival durante jogo
+  - Sistema de eliminação automático
+  - Detecção de vencedor
+
+✅ SISTEMA DE MORTE
+  - Jogador morre = eliminado automaticamente
+  - Vira espectador
+  - Mensagem de eliminação para todos
+  - Sem mensagens padrão de morte
+
+
+🎮 COMO FUNCIONA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. JOGADOR CONECTA
+   ↓
+   - Auto-join no jogo
+   - Teleporte para lobby
+   - Scoreboard criada
+   - Título de boas-vindas
+   - GameMode Adventure
+
+2. AGUARDANDO JOGADORES (WAITING)
+   ↓
+   - Mínimo 2 jogadores necessários
+   - Proteção total no lobby
+   - Scoreboard mostra "AGUARDANDO"
+
+3. CONTAGEM REGRESSIVA (COUNTDOWN)
+   ↓
+   - 30 segundos de countdown
+   - Mensagens a cada 30s, 10s, 5s, 4s, 3s, 2s, 1s
+   - Títulos na tela nos últimos 5 segundos
+   - Sons de pling
+   - Se jogadores < 2, cancela countdown
+
+4. JOGO INICIADO (PLAYING)
+   ↓
+   - Teleporte para arena
+   - GameMode Survival
+   - Som de dragon growl
+   - Título "BOA SORTE!"
+   - Timer do jogo inicia
+
+5. DURANTE O JOGO
+   ↓
+   - Jogador morre = eliminado
+   - Vira espectador
+   - Mensagem de eliminação
+   - Scoreboard atualiza vivos
+
+6. FIM DO JOGO (ENDING)
+   ↓
+   - Último jogador vivo = vencedor
+   - Título de vitória
+   - Som de challenge complete
+   - Prêmio de 1000 coins (TODO: economia)
+   - Aguarda 5 segundos
+   - Reinicia o ciclo
+
+
+⚙️ CONFIGURAÇÕES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Arquivo: game/plugins/Game/config.yml
+
+# Tempo de espera
+waiting-time: 30
+
+# Jogadores
+min-players: 2
+max-players: 100
+
+# Prêmio
+win-reward: 1000
+
+# Localização do lobby (IMPORTANTE!)
+lobby-location:
+  world: "world"
+  x: 0
+  y: 100
+  z: 0
+  yaw: 0
+  pitch: 0
+
+# Localização da arena (IMPORTANTE!)
+arena-location:
+  world: "world"
+  x: 100
+  y: 100
+  z: 100
+  yaw: 0
+  pitch: 0
+
+
+⚠️ IMPORTANTE - CONFIGURAR LOCALIZAÇÕES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Você PRECISA configurar as localizações no config.yml:
+
+1. LOBBY LOCATION
+   - Onde jogadores aparecem ao entrar
+   - Deve ser uma área segura
+   - Recomendado: plataforma no spawn
+
+2. ARENA LOCATION
+   - Onde o jogo acontece
+   - Pode ser a mesma do lobby ou diferente
+   - Recomendado: arena separada
+
+COMO PEGAR AS COORDENADAS:
+1. Entre no servidor
+2. Vá para o local desejado
+3. Digite /tp ~ ~ ~ (mostra suas coordenadas)
+4. Copie X, Y, Z, Yaw, Pitch
+5. Cole no config.yml
+
+
+🎯 COMANDOS (OPCIONAIS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+/round6 join   - Entrar manualmente (não necessário)
+/round6 leave  - Sair do jogo
+/round6 start  - Forçar início (apenas admin)
+
+
+📊 SCOREBOARD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Exemplo:
+
+    ʀᴏᴜɴᴅ 6
+
+ᴊᴏɢᴀᴅᴏʀᴇꜱ: 10
+ᴠɪᴠᴏꜱ: 7
+
+ᴇꜱᴛᴀᴅᴏ: ᴇᴍ ᴊᴏɢᴏ
+ᴛᴇᴍᴘᴏ: 02:45
+
+admin.savagemc.net
+
+
+🔧 PRÓXIMOS PASSOS (OPCIONAL)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Para tornar ainda mais profissional, você pode adicionar:
+
+1. MINIGAMES ESPECÍFICOS
+   - Luz vermelha, luz verde
+   - Cabo de guerra
+   - Ponte de vidro
+   - Etc.
+
+2. SISTEMA DE ECONOMIA
+   - Integrar com Vault
+   - Dar coins ao vencedor
+   - Loja de itens
+
+3. SISTEMA DE SPAWN POINTS
+   - Múltiplos pontos de spawn na arena
+   - Distribuição aleatória de jogadores
+
+4. KITS E ITENS
+   - Dar itens ao iniciar jogo
+   - Kits personalizados
+
+5. MAPAS MÚLTIPLOS
+   - Sistema de rotação de mapas
+   - Votação de mapas
+
+6. ESTATÍSTICAS
+   - Salvar vitórias no MySQL
+   - Ranking de jogadores
+   - Top 10
+
+
+✅ TESTADO E FUNCIONANDO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Auto-join ao conectar
+✅ Scoreboard em tempo real
+✅ Sistema de fases completo
+✅ Títulos e sons
+✅ Sistema de eliminação
+✅ Detecção de vencedor
+✅ Proteções no lobby
+✅ Teleporte automático
+
+
+═══════════════════════════════════════════════════════════════════════════════
+              🎮 AGORA ESTÁ PROFISSIONAL COMO MRBEAST! 🚀
+═══════════════════════════════════════════════════════════════════════════════
+

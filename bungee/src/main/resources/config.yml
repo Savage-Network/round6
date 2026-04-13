@@ -1,0 +1,12 @@
+# Configuração do EventBungee
+
+# Servidores
+servers:
+  auth: "auth"
+  hub: "hub"
+  game: "game"
+
+# Mensagens
+messages:
+  pirate_redirect: "§7Detectado como jogador pirata, redirecionando para autenticação..."
+  original_redirect: "§7Bem-vindo! Conectando ao lobby..."

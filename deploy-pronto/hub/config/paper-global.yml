@@ -1,0 +1,6 @@
+# Configuração Paper para BungeeCord
+# Coloque este arquivo em: config/paper-global.yml
+
+proxies:
+  bungee-cord:
+    online-mode: false

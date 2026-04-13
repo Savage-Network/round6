@@ -1,0 +1,12 @@
+name: Game
+version: 1.0.0
+main: rip.rafa.event.game.GamePlugin
+api-version: 1.20
+author: zrwfaxd
+description: Round 6 Game Server
+
+commands:
+  round6:
+    description: Round 6 commands
+    usage: /round6 <join|leave|start>
+    aliases: [r6, game]

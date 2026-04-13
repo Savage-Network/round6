@@ -1,0 +1,48 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                          LINKS PARA DOWNLOAD                                 ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+🔽 BUNGEECORD (Proxy)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Link: https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+Versão: Latest (sempre atualizado)
+Arquivo: BungeeCord.jar
+Colocar em: bungeecord/BungeeCord.jar
+
+OU use o link direto:
+https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+
+
+🔽 PAPER (Servidores Auth, Hub e Game)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Link: https://papermc.io/downloads/paper
+Versão: 1.20.6
+Arquivo: paper-1.20.6-xxx.jar
+
+BAIXAR 3 CÓPIAS (ou usar o mesmo arquivo):
+1. Renomear para: server.jar → Colocar em: auth/server.jar
+2. Renomear para: server.jar → Colocar em: hub/server.jar
+3. Renomear para: server.jar → Colocar em: game/server.jar
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📋 CHECKLIST:
+
+[ ] BungeeCord Latest baixado → bungeecord/BungeeCord.jar
+[ ] Paper 1.20.6 baixado → auth/server.jar
+[ ] Paper 1.20.6 baixado → hub/server.jar
+[ ] Paper 1.20.6 baixado → game/server.jar
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⚡ DOWNLOAD RÁPIDO (copie e cole no navegador):
+
+BungeeCord: https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+Paper: https://papermc.io/downloads/paper
+
+═══════════════════════════════════════════════════════════════════════════════
+
+💡 DICA: Você pode usar o mesmo Paper.jar para os 3 servidores!
+
+═══════════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,107 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              📝 ADICIONAR SERVIDORES NO CONFIG.YML 📝                        ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+INSTRUÇÕES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Abra o config.yml no editor do Pterodactyl
+
+2. Encontre a seção "servers:" (deve ter apenas "lobby:")
+
+3. SUBSTITUA toda a seção "servers:" por:
+
+servers:
+  auth:
+    motd: Auth Server
+    address: localhost:25579
+    restricted: false
+  hub:
+    motd: Hub Server
+    address: localhost:25578
+    restricted: false
+  game:
+    motd: Game Server
+    address: localhost:25580
+    restricted: false
+
+4. Encontre a linha "priorities:" dentro de "listeners:"
+
+5. SUBSTITUA por:
+
+  priorities:
+  - auth
+
+6. Salve o arquivo (Ctrl+S)
+
+7. Reinicie o BungeeCord
+
+
+EXEMPLO COMPLETO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+listeners:
+- query_port: 25577
+  motd: '&1Another Bungee server'
+  tab_list: GLOBAL_PING
+  query_enabled: false
+  proxy_protocol: false
+  ping_passthrough: false
+  priorities:
+  - auth
+  bind_local_address: true
+  host: 0.0.0.0:25100
+  max_players: 100
+  tab_size: 60
+  force_default_server: false
+  forced_hosts: {}
+online_mode: false
+disabled_commands:
+- disabler
+servers:
+  auth:
+    motd: Auth Server
+    address: localhost:25579
+    restricted: false
+  hub:
+    motd: Hub Server
+    address: localhost:25578
+    restricted: false
+  game:
+    motd: Game Server
+    address: localhost:25580
+    restricted: false
+groups:
+  md_5:
+  - admin
+timeout: 30000
+player_limit: -1
+permissions:
+  default:
+  - bungeecord.command.server
+  - bungeecord.command.list
+  admin:
+  - bungeecord.command.alert
+  - bungeecord.command.end
+  - bungeecord.command.ip
+  - bungeecord.command.reload
+network_compression_threshold: 256
+prevent_proxy_connections: false
+ip_forward: true
+log_commands: false
+log_pings: true
+connection_throttle: 4000
+connection_throttle_limit: 3
+stats: false
+
+
+IMPORTANTE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Mantenha a indentação EXATA (use espaços, não tabs)
+✅ Não adicione comentários (#)
+✅ Salve e reinicie o BungeeCord
+
+
+═══════════════════════════════════════════════════════════════════════════════

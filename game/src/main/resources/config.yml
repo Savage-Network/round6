@@ -1,0 +1,84 @@
+# Round 6 - Game Server Configuration
+
+# Database MySQL
+database:
+  host: "mysql52-farm1.kinghost.net"
+  port: 3306
+  database: "zrfa"
+  username: "zrfa"
+  password: "Rafael141011"
+  pool:
+    maximum-pool-size: 10
+    minimum-idle: 2
+    connection-timeout: 30000
+    idle-timeout: 600000
+    max-lifetime: 1800000
+
+# Configurações do Round 6
+round6:
+  # Tempo de espera antes de iniciar (segundos)
+  waiting-time: 30
+  
+  # Mínimo de jogadores para iniciar
+  min-players: 2
+  
+  # Máximo de jogadores
+  max-players: 100
+  
+  # Tempo entre jogos (segundos)
+  game-cooldown: 60
+  
+  # Prêmio por vitória
+  win-reward: 1000
+  
+  # Localização do lobby (onde jogadores aparecem ao entrar)
+  lobby-location:
+    world: "world"
+    x: 0
+    y: 100
+    z: 0
+    yaw: 0
+    pitch: 0
+  
+  # Localização da arena (onde o jogo acontece)
+  arena-location:
+    world: "world"
+    x: 100
+    y: 100
+    z: 100
+    yaw: 0
+    pitch: 0
+
+# Mensagens
+messages:
+  prefix: "&#FF1744[Round 6] "
+  
+  # Mensagens de jogo
+  game-starting: "&#FFFFFFᴏ ᴊᴏɢᴏ ᴠᴀɪ ᴄᴏᴍᴇᴄ̧ᴀʀ ᴇᴍ &#FF1744{time} &#FFFFFFꜱᴇɢᴜɴᴅᴏꜱ!"
+  game-started: "&#FF1744ᴏ ᴊᴏɢᴏ ᴄᴏᴍᴇᴄ̧ᴏᴜ! ʙᴏᴀ ꜱᴏʀᴛᴇ!"
+  game-ended: "&#FFFFFFᴏ ᴊᴏɢᴏ ᴛᴇʀᴍɪɴᴏᴜ!"
+  countdown-cancelled: "&#FFFFFFᴄᴏɴᴛᴀɢᴇᴍ ᴄᴀɴᴄᴇʟᴀᴅᴀ! ᴊᴏɢᴀᴅᴏʀᴇꜱ ɪɴꜱᴜꜰɪᴄɪᴇɴᴛᴇꜱ."
+  
+  # Mensagens de jogadores
+  player-joined: "&#FF1744{player} &#FFFFFFᴇɴᴛʀᴏᴜ ɴᴏ ᴊᴏɢᴏ! &#FFFFFF(&#FF1744{current}&#FFFFFF/&#FF1744{min}&#FFFFFF)"
+  player-left: "&#FF1744{player} &#FFFFFFꜱᴀɪᴜ ᴅᴏ ᴊᴏɢᴏ! &#FFFFFF(&#FF1744{current}&#FFFFFF)"
+  player-eliminated: "&#FF1744{player} &#FFFFFFꜰᴏɪ ᴇʟɪᴍɪɴᴀᴅᴏ!"
+  player-won: "&#FF1744{player} &#FFFFFFᴠᴇɴᴄᴇᴜ ᴏ ᴊᴏɢᴏ!"
+  no-winner: "&#FFFFFFɴɪɴɢᴜᴇ́ᴍ ᴠᴇɴᴄᴇᴜ ᴏ ᴊᴏɢᴏ!"
+  
+  # Mensagens de entrada
+  join-game: "&#FFFFFFᴠᴏᴄᴇ̂ ᴇɴᴛʀᴏᴜ ɴᴏ &#FF1744Round 6&#FFFFFF!"
+  leave-game: "&#FFFFFFᴠᴏᴄᴇ̂ ꜱᴀɪᴜ ᴅᴏ &#FF1744Round 6&#FFFFFF!"
+
+# Scoreboard
+scoreboard:
+  title: "&#FF1744ʀᴏᴜɴᴅ 6"
+  lines:
+    - ""
+    - "&#FFFFFFᴊᴏɢᴀᴅᴏʀᴇꜱ: &#FF1744{players}"
+    - "&#FFFFFFᴠɪᴠᴏꜱ: &#FF1744{alive}"
+    - ""
+    - "&#FFFFFFᴇꜱᴛᴀᴅᴏ: {state}"
+    - "&#FFFFFFᴛᴇᴍᴘᴏ: &#FF1744{time}"
+    - ""
+    - "&#FFFFFF{server}"
