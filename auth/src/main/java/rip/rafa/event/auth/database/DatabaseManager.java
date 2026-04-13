@@ -197,6 +197,54 @@ public class DatabaseManager {
         return null;
     }
     
+    public boolean checkPassword(UUID uuid, String password) {
+        String storedPassword = getPassword(uuid);
+        if (storedPassword == null) {
+            return false;
+        }
+        
+        // Hash da senha fornecida
+        String hashedPassword = hashPassword(password);
+        return storedPassword.equals(hashedPassword);
+    }
+    
+    public boolean updatePassword(UUID uuid, String newPassword) {
+        String sql = "UPDATE round6_users SET password = ? WHERE uuid = ?";
+        
+        try (Connection conn = getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            
+            // Hash da nova senha
+            String hashedPassword = hashPassword(newPassword);
+            stmt.setString(1, hashedPassword);
+            stmt.setString(2, uuid.toString());
+            
+            return stmt.executeUpdate() > 0;
+        } catch (SQLException e) {
+            plugin.getLogger().warning("Erro ao atualizar senha: " + e.getMessage());
+            return false;
+        }
+    }
+    
+    private String hashPassword(String password) {
+        try {
+            java.security.MessageDigest md = java.security.MessageDigest.getInstance("SHA-256");
+            byte[] hash = md.digest(password.getBytes("UTF-8"));
+            StringBuilder hexString = new StringBuilder();
+            
+            for (byte b : hash) {
+                String hex = Integer.toHexString(0xff & b);
+                if (hex.length() == 1) hexString.append('0');
+                hexString.append(hex);
+            }
+            
+            return hexString.toString();
+        } catch (Exception e) {
+            plugin.getLogger().severe("Erro ao fazer hash da senha: " + e.getMessage());
+            return Integer.toHexString(password.hashCode());
+        }
+    }
+    
     public void close() {
         if (dataSource != null && !dataSource.isClosed()) {
             dataSource.close();

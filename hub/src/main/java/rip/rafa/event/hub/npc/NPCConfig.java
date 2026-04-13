@@ -54,11 +54,11 @@ public class NPCConfig {
         
         NPCData.LocationData location = new NPCData.LocationData();
         location.setWorld("world");
-        location.setX(0.5);
+        location.setX(-85.60);
         location.setY(64.0);
-        location.setZ(0.5);
-        location.setYaw(0.0f);
-        location.setPitch(0.0f);
+        location.setZ(14.61);
+        location.setYaw(-110.85f);
+        location.setPitch(-0.15f);
         npc.setLocation(location);
         
         NPCData.PropertiesData properties = new NPCData.PropertiesData();

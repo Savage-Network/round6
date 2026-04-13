@@ -3,6 +3,7 @@ package rip.rafa.event.auth;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+import rip.rafa.event.auth.command.ChangePasswordCommand;
 import rip.rafa.event.auth.command.LoginCommand;
 import rip.rafa.event.auth.command.RegisterCommand;
 import rip.rafa.event.auth.database.DatabaseManager;
@@ -31,6 +32,7 @@ public class AuthPlugin extends JavaPlugin {
         
         getCommand("login").setExecutor(new LoginCommand(this));
         getCommand("register").setExecutor(new RegisterCommand(this));
+        getCommand("acc").setExecutor(new ChangePasswordCommand(this));
         
         // Bloqueia movimento
         Bukkit.getScheduler().runTaskTimer(this, () -> {

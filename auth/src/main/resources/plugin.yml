@@ -12,3 +12,7 @@ commands:
   register:
     description: Registrar uma conta
     usage: /register <senha> <senha>
+  acc:
+    description: Trocar senha
+    usage: /acc <senha_atual> <nova_senha>
+    aliases: [changepassword, trocarsenha]
