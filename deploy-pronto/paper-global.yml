@@ -1,6 +1,0 @@
-# Configuração Paper para BungeeCord
-# Copie este arquivo para a pasta config/ de cada servidor (Auth, Hub, Game)
-
-proxies:
-  bungee-cord:
-    online-mode: false

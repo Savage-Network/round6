@@ -226,6 +226,68 @@ public class DatabaseManager {
         }
     }
     
+    public String getEmail(UUID uuid) {
+        String sql = "SELECT email FROM round6_users WHERE uuid = ?";
+        
+        try (Connection conn = getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            
+            stmt.setString(1, uuid.toString());
+            ResultSet rs = stmt.executeQuery();
+            
+            if (rs.next()) {
+                return rs.getString("email");
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().warning("Erro ao buscar email: " + e.getMessage());
+        }
+        
+        return null;
+    }
+    
+    public boolean updateEmail(UUID uuid, String email) {
+        String sql = "UPDATE round6_users SET email = ? WHERE uuid = ?";
+        
+        try (Connection conn = getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            
+            stmt.setString(1, email);
+            stmt.setString(2, uuid.toString());
+            
+            return stmt.executeUpdate() > 0;
+        } catch (SQLException e) {
+            plugin.getLogger().warning("Erro ao atualizar email: " + e.getMessage());
+            return false;
+        }
+    }
+    
+    public String[] getAccountInfo(UUID uuid) {
+        String sql = "SELECT username, registered_at, last_login, last_ip, email FROM round6_users WHERE uuid = ?";
+        
+        try (Connection conn = getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            
+            stmt.setString(1, uuid.toString());
+            ResultSet rs = stmt.executeQuery();
+            
+            if (rs.next()) {
+                String username = rs.getString("username");
+                String registeredAt = rs.getTimestamp("registered_at") != null ? 
+                    new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm").format(rs.getTimestamp("registered_at")) : "N/A";
+                String lastLogin = rs.getTimestamp("last_login") != null ? 
+                    new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm").format(rs.getTimestamp("last_login")) : "N/A";
+                String lastIp = rs.getString("last_ip") != null ? rs.getString("last_ip") : "N/A";
+                String email = rs.getString("email");
+                
+                return new String[]{username, registeredAt, lastLogin, lastIp, email};
+            }
+        } catch (SQLException e) {
+            plugin.getLogger().warning("Erro ao buscar informações da conta: " + e.getMessage());
+        }
+        
+        return null;
+    }
+    
     private String hashPassword(String password) {
         try {
             java.security.MessageDigest md = java.security.MessageDigest.getInstance("SHA-256");

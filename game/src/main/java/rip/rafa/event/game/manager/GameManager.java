@@ -329,11 +329,29 @@ public class GameManager {
     }
     
     public int getPlayerCount() {
-        return players.size();
+        // Não contar gamemasters e guardas
+        int count = 0;
+        for (UUID uuid : players) {
+            Player player = Bukkit.getPlayer(uuid);
+            if (player != null && !plugin.getGameMasterManager().isGameMaster(player) 
+                && !plugin.getGameMasterManager().isGuard(player)) {
+                count++;
+            }
+        }
+        return count;
     }
     
     public int getAliveCount() {
-        return alivePlayers.size();
+        // Não contar gamemasters e guardas
+        int count = 0;
+        for (UUID uuid : alivePlayers) {
+            Player player = Bukkit.getPlayer(uuid);
+            if (player != null && !plugin.getGameMasterManager().isGameMaster(player) 
+                && !plugin.getGameMasterManager().isGuard(player)) {
+                count++;
+            }
+        }
+        return count;
     }
     
     public int getGameTime() {

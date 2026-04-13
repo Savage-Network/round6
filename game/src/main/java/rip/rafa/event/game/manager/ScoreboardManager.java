@@ -31,6 +31,32 @@ public class ScoreboardManager {
         scoreboards.put(player.getUniqueId(), scoreboard);
         
         updateScoreboard(player);
+        updateTabList(player);
+    }
+    
+    public void updateTabList(Player player) {
+        // Atualizar nome no tab para todos os jogadores
+        for (Player online : Bukkit.getOnlinePlayers()) {
+            Scoreboard scoreboard = scoreboards.get(online.getUniqueId());
+            if (scoreboard == null) continue;
+            
+            // Criar team para o jogador se não existir
+            Team team = scoreboard.getTeam(player.getName());
+            if (team == null) {
+                team = scoreboard.registerNewTeam(player.getName());
+            }
+            
+            // Definir prefixo baseado no gamemaster/guard
+            String prefix = "";
+            if (plugin.getGameMasterManager().isGameMaster(player)) {
+                prefix = colorize("&#FF1744[GM] ");
+            } else if (plugin.getGameMasterManager().isGuard(player)) {
+                prefix = colorize("&#FF1744[GUARD] ");
+            }
+            
+            team.setPrefix(prefix);
+            team.addEntry(player.getName());
+        }
     }
     
     public void removeScoreboard(Player player) {
@@ -45,11 +71,6 @@ public class ScoreboardManager {
         Objective objective = scoreboard.getObjective("round6");
         if (objective == null) return;
         
-        // Limpar scores antigos
-        for (String entry : scoreboard.getEntries()) {
-            scoreboard.resetScores(entry);
-        }
-        
         GameManager gameManager = plugin.getGameManager();
         int line = 15;
         
@@ -62,7 +83,15 @@ public class ScoreboardManager {
                     .replace("{state}", getStateText(gameManager.getState()))
                     .replace("{server}", "admin.savagemc.net");
             
-            Score score = objective.getScore(colorize(lineText));
+            String colorized = colorize(lineText);
+            
+            // Usar um identificador único para cada linha para evitar piscadas
+            String entry = colorized + "§" + line;
+            if (entry.length() > 40) {
+                entry = entry.substring(0, 40);
+            }
+            
+            Score score = objective.getScore(entry);
             score.setScore(line--);
         }
     }

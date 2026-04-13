@@ -23,6 +23,8 @@ dependencies {
     compileOnly("com.viaversion:viaversion-api:4.9.2")
     compileOnly("me.clip:placeholderapi:2.11.5")
     compileOnly("com.mojang:authlib:1.5.25")
+    compileOnly("org.projectlombok:lombok:1.18.30")
+    annotationProcessor("org.projectlombok:lombok:1.18.30")
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("com.zaxxer:HikariCP:4.0.3")
     implementation("mysql:mysql-connector-java:8.0.33")

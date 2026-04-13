@@ -1,10 +1,13 @@
 package rip.rafa.event.bungee.listener;
 
 import net.md_5.bungee.api.config.ServerInfo;
+import net.md_5.bungee.api.event.PlayerDisconnectEvent;
+import net.md_5.bungee.api.event.PostLoginEvent;
 import net.md_5.bungee.api.event.ServerConnectEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
 import rip.rafa.event.bungee.EventBungee;
+import rip.rafa.event.bungee.account.AccountManager;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -21,6 +24,18 @@ public class PlayerConnectionListener implements Listener {
     
     public PlayerConnectionListener(EventBungee plugin) {
         this.plugin = plugin;
+    }
+    
+    @EventHandler
+    public void onPostLogin(PostLoginEvent event) {
+        // Carrega conta do jogador
+        AccountManager.load(event.getPlayer().getUniqueId(), event.getPlayer().getName());
+    }
+    
+    @EventHandler
+    public void onDisconnect(PlayerDisconnectEvent event) {
+        // Descarrega conta do jogador
+        AccountManager.unload(event.getPlayer().getUniqueId());
     }
     
     @EventHandler

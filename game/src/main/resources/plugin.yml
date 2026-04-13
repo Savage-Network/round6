@@ -10,3 +10,12 @@ commands:
     description: Round 6 commands
     usage: /round6 <join|leave|start>
     aliases: [r6, game]
+  acc:
+    description: Ver informações da conta
+    usage: /acc [jogador]
+    aliases: [account, conta]
+  whitelist:
+    description: Gerenciar whitelist
+    usage: /whitelist <on|off|add|remove|list|status>
+    permission: round6.admin
+    aliases: [wl]

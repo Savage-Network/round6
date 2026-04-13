@@ -15,6 +15,8 @@ repositories {
 
 dependencies {
     compileOnly("net.md-5:bungeecord-api:1.21-R0.1")
+    compileOnly("org.projectlombok:lombok:1.18.30")
+    annotationProcessor("org.projectlombok:lombok:1.18.30")
     implementation("com.google.code.gson:gson:2.10.1")
 }
 

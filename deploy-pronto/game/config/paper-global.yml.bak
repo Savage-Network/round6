@@ -1,8 +1,0 @@
-# Configuração Paper para Hub Server
-# Coloque este arquivo em: config/paper-global.yml
-
-proxies:
-  velocity:
-    enabled: true
-    online-mode: true
-    secret: round6secret2024

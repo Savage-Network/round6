@@ -33,6 +33,7 @@ public class AuthPlugin extends JavaPlugin {
         getCommand("login").setExecutor(new LoginCommand(this));
         getCommand("register").setExecutor(new RegisterCommand(this));
         getCommand("acc").setExecutor(new ChangePasswordCommand(this));
+        getCommand("acc").setTabCompleter(new rip.rafa.event.auth.command.ChangePasswordTabCompleter());
         
         // Bloqueia movimento
         Bukkit.getScheduler().runTaskTimer(this, () -> {

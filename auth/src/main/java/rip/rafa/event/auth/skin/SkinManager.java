@@ -102,14 +102,39 @@ public class SkinManager {
     }
     
     private void setSkin(Player player, SkinData skinData) throws Exception {
+        // Pega o EntityPlayer (CraftPlayer -> EntityPlayer)
         Object craftPlayer = player.getClass().getMethod("getHandle").invoke(player);
-        Object profile = craftPlayer.getClass().getMethod("getProfile").invoke(craftPlayer);
         
-        if (profile instanceof GameProfile) {
-            GameProfile gameProfile = (GameProfile) profile;
+        // Tenta diferentes métodos para obter o GameProfile
+        GameProfile gameProfile = null;
+        
+        try {
+            // Tenta getGameProfile() primeiro (Paper/Spigot moderno)
+            gameProfile = (GameProfile) craftPlayer.getClass().getMethod("getGameProfile").invoke(craftPlayer);
+        } catch (NoSuchMethodException e) {
+            try {
+                // Tenta através do campo direto
+                java.lang.reflect.Field profileField = craftPlayer.getClass().getDeclaredField("gameProfile");
+                profileField.setAccessible(true);
+                gameProfile = (GameProfile) profileField.get(craftPlayer);
+            } catch (NoSuchFieldException ex) {
+                // Última tentativa: busca por qualquer campo GameProfile
+                for (java.lang.reflect.Field field : craftPlayer.getClass().getDeclaredFields()) {
+                    if (field.getType().equals(GameProfile.class)) {
+                        field.setAccessible(true);
+                        gameProfile = (GameProfile) field.get(craftPlayer);
+                        break;
+                    }
+                }
+            }
+        }
+        
+        if (gameProfile != null) {
             gameProfile.getProperties().removeAll("textures");
             gameProfile.getProperties().put("textures", 
                 new Property("textures", skinData.getTexture(), skinData.getSignature()));
+        } else {
+            throw new Exception("Não foi possível obter o GameProfile do jogador");
         }
     }
     
